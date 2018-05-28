@@ -12,13 +12,15 @@
             android:id="@+id/custom_nav1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
             android:background="@color/colorPrimary">
 
             <RelativeLayout
                 android:id="@+id/menu_icon"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -27,7 +29,6 @@
             </RelativeLayout>
 
             <android.support.design.widget.NavigationView
-                android:visibility="gone"
                 android:id="@+id/nav_view"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -37,6 +38,7 @@
                 android:background="@color/colorPrimary"
                 android:fitsSystemWindows="true"
                 android:theme="@style/NavigationDrawerStyle"
+                android:visibility="gone"
                 app:headerLayout="@layout/nav_header_dash_board"
                 app:itemIconTint="@drawable/drawer_item_color"
                 app:itemTextColor="@drawable/drawer_item_color"
@@ -214,8 +216,7 @@
         <FrameLayout
             android:id="@+id/main_frameDash"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_toRightOf="@+id/custom_nav1" />
+            android:layout_height="match_parent" />
 
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

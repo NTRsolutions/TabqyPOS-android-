@@ -12,6 +12,7 @@ import android.widget.Button;
 
 import com.askonlinesolutions.user.tabqy.R;
 import com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView;
+import com.askonlinesolutions.user.tabqy.utils.SupportingWidgets;
 
 
 public class LoginFragment extends Fragment {
@@ -47,10 +48,11 @@ public class LoginFragment extends Fragment {
     }
 
     private void setListeners() {
+
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager().beginTransaction().replace(R.id.main_frame, new PinFragment()).commit();
+                new SupportingWidgets().callFragment(getActivity(), new PinFragment(), R.id.main_frame);
 
             }
         });

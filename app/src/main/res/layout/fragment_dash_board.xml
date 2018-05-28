@@ -4,85 +4,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     tools:context=".fragments.DashBoardFragment">
 
     <RelativeLayout
-        android:background="#F2F3F7"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/nav_menu"
+        android:layout_width="@dimen/nav1_width"
+        android:layout_height="80dp"
+        android:background="@color/colorPrimary">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_viewtop"
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_menu" />
+    </RelativeLayout>
 
-            <RelativeLayout
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_viewtop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/nav_menu">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav_header_height"
+            android:background="@color/colorWhite"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/nav_header_desc"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                app:srcCompat="@drawable/profile_new" />
+
+            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                android:id="@+id/txt_name"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/nav_header_height"
-                android:background="@color/colorWhite"
-                android:gravity="bottom"
-                android:orientation="vertical"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imageView"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:text="@string/nav_header_title"
+                android:textColor="@color/color_lightgreytext" />
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/nav_header_desc"
-                    android:paddingTop="@dimen/nav_header_vertical_spacing"
-                    app:srcCompat="@drawable/profile_new" />
+            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_name"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imageView"
+                android:text="@string/nav_header_subtitle"
+                android:textColor="@color/color_lightgreytext" />
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
-                    android:id="@+id/txt_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_toRightOf="@+id/imageView"
-                    android:paddingTop="@dimen/nav_header_vertical_spacing"
-                    android:text="@string/nav_header_title"
-                    android:textColor="@color/color_lightgreytext" />
+            <ImageView
+                android:id="@+id/img_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/nav_header_desc"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:src="@drawable/ic_notification" />
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
-                    android:id="@+id/txt_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txt_name"
-                    android:layout_marginLeft="10dp"
-                    android:layout_toRightOf="@+id/imageView"
-                    android:text="@string/nav_header_subtitle"
-                    android:textColor="@color/color_lightgreytext" />
+            <ImageView
+                android:id="@+id/img_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/img_notification"
+                android:contentDescription="@string/nav_header_desc"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:src="@drawable/ic_logout" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
-                <ImageView
-                    android:id="@+id/img_notification"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:contentDescription="@string/nav_header_desc"
-                    android:paddingTop="@dimen/nav_header_vertical_spacing"
-                    android:src="@drawable/ic_notification" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nav_menu"
+        android:background="#F2F3F7">
 
-                <ImageView
-                    android:id="@+id/img_logout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_toRightOf="@+id/img_notification"
-                    android:contentDescription="@string/nav_header_desc"
-                    android:paddingTop="@dimen/nav_header_vertical_spacing"
-                    android:src="@drawable/ic_logout" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
             android:id="@+id/cardview_todaysorder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/card_viewtop"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             app:cardCornerRadius="15dp">
@@ -92,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp">
 
-                  <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                     android:id="@+id/txt_total_order"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -100,7 +116,7 @@
                     android:padding="5dp"
                     android:text="03"
                     android:textColor="@color/dashboardtextcolor"
-                      android:textStyle="bold" />
+                    android:textStyle="bold" />
 
                 <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
@@ -112,230 +128,239 @@
                     android:textStyle="bold" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
+
         <LinearLayout
-            android:weightSum="3"
-            android:layout_centerInParent="true"
-            android:layout_below="@+id/cardview_todaysorder"
-            android:layout_height="wrap_content"
             android:id="@+id/layout2"
-            android:layout_width="wrap_content">
-        <android.support.v7.widget.CardView
-            android:layout_marginTop="30dp"
-            android:id="@+id/cardview_walking"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cardview_todaysorder"
             android:layout_centerInParent="true"
-            app:cardCornerRadius="15dp">
+            android:weightSum="3">
 
-            <RelativeLayout
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardview_walking"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp">
+                android:layout_below="@+id/cardview_todaysorder"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="15dp">
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
-                    android:id="@+id/txt_waliking_order"
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:padding="5dp"
-                    android:text="03"
-                    android:textColor="@color/dashboardtextcolor"
-                    android:textStyle="bold" />
+                    android:padding="5dp">
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txt_waliking_order"
-                    android:padding="8dp"
-                    android:text="Walking Order"
-                    android:textColor="@color/color_lightgreytext"
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:id="@+id/txt_waliking_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="03"
+                        android:textColor="@color/dashboardtextcolor"
+                        android:textStyle="bold" />
 
-                    android:textStyle="bold" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_waliking_order"
+                        android:padding="8dp"
+                        android:text="Walking Order"
+                        android:textColor="@color/color_lightgreytext"
 
-        <android.support.v7.widget.CardView
-           android:layout_marginLeft="15dp"
-            android:layout_marginTop="30dp"
-            android:id="@+id/cardview_newonline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/cardview_todaysorder"
-            android:layout_toLeftOf="@+id/cardview_walking"
-            app:cardCornerRadius="15dp">
-            <RelativeLayout
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardview_newonline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp">
+                android:layout_below="@+id/cardview_todaysorder"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_toLeftOf="@+id/cardview_walking"
+                app:cardCornerRadius="15dp">
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
-                    android:id="@+id/txt_newonline_order"
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:padding="5dp"
-                    android:text="03"
-                    android:textColor="@color/dashboardtextcolor"
-                    android:textStyle="bold" />
+                    android:padding="5dp">
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txt_newonline_order"
-                    android:padding="8dp"
-                    android:text="New Online Order"
-                    android:textColor="@color/color_lightgreytext"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:id="@+id/txt_newonline_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="03"
+                        android:textColor="@color/dashboardtextcolor"
+                        android:textStyle="bold" />
 
-        <android.support.v7.widget.CardView
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="30dp"
-            android:id="@+id/cardview_crmorder"
-            android:layout_below="@+id/cardview_todaysorder"
-            android:layout_width="wrap_content"
-            android:layout_toRightOf="@+id/cardview_walking"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="15dp">
-            <RelativeLayout
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_newonline_order"
+                        android:padding="8dp"
+                        android:text="New Online Order"
+                        android:textColor="@color/color_lightgreytext"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardview_crmorder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp">
+                android:layout_below="@+id/cardview_todaysorder"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/cardview_walking"
+                app:cardCornerRadius="15dp">
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
-                    android:id="@+id/txt_crm_order"
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:padding="5dp"
-                    android:text="03"
-                    android:textColor="@color/dashboardtextcolor"
-                    android:textStyle="bold" />
+                    android:padding="5dp">
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txt_crm_order"
-                    android:padding="8dp"
-                    android:text="CRM Order"
-                    android:textColor="@color/color_lightgreytext"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:id="@+id/txt_crm_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="03"
+                        android:textColor="@color/dashboardtextcolor"
+                        android:textStyle="bold" />
+
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_crm_order"
+                        android:padding="8dp"
+                        android:text="CRM Order"
+                        android:textColor="@color/color_lightgreytext"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
         </LinearLayout>
+
         <LinearLayout
-          android:weightSum="2"
-            android:layout_centerInParent="true"
-            android:layout_below="@+id/layout2"
-            android:layout_height="wrap_content"
             android:id="@+id/cardview_inprogress"
-            android:layout_width="wrap_content">
-        <android.support.v7.widget.CardView
-            android:layout_weight="1"
-            android:layout_marginTop="30dp"
-            android:id="@+id/cardview_orderinprogress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="15dp">
-            <RelativeLayout
+            android:layout_below="@+id/layout2"
+            android:layout_centerInParent="true"
+            android:weightSum="2">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardview_orderinprogress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp">
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="15dp">
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
-
-                    android:id="@+id/txt_orderinprogress"
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:padding="5dp"
-                    android:text="03"
-                    android:textColor="@color/dashboardtextcolor"
-                    android:textStyle="bold" />
+                    android:padding="5dp">
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txt_orderinprogress"
-                    android:padding="8dp"
-                    android:text="Order In Progress"
-                    android:textColor="@color/color_lightgreytext"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
+                        android:id="@+id/txt_orderinprogress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="03"
+                        android:textColor="@color/dashboardtextcolor"
+                        android:textStyle="bold" />
 
-        <android.support.v7.widget.CardView
-            android:layout_weight="1"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
-            android:id="@+id/cardview_todaysalesvalue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="15dp">
-            <RelativeLayout
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_orderinprogress"
+                        android:padding="8dp"
+                        android:text="Order In Progress"
+                        android:textColor="@color/color_lightgreytext"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardview_todaysalesvalue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp">
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="15dp">
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
-
-                    android:id="@+id/txt_todaysalesvalue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:padding="5dp"
-                    android:text="sAR500"
-                    android:textColor="@color/dashboardtextcolor"
-                    android:textStyle="bold" />
-
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <RelativeLayout
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/txt_todaysalesvalue"
-                    android:padding="8dp"
-                    android:text="Today's Sales Values"
-                    android:textColor="@color/color_lightgreytext"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-</LinearLayout>
+                    android:padding="5dp">
+
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+
+                        android:id="@+id/txt_todaysalesvalue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="sAR500"
+                        android:textColor="@color/dashboardtextcolor"
+                        android:textStyle="bold" />
+
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_todaysalesvalue"
+                        android:padding="8dp"
+                        android:text="Today's Sales Values"
+                        android:textColor="@color/color_lightgreytext"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="30dp"
-            android:weightSum="2"
-            android:layout_below="@+id/cardview_inprogress"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/cardview_inprogress"
             android:layout_centerInParent="true"
-            android:layout_width="wrap_content">
+            android:layout_marginTop="30dp"
+            android:weightSum="2">
 
             <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
-                android:layout_width="200dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="New Order"
-                android:textColor="@color/colorWhite"
-                android:padding="10dp"
-                android:gravity="center"
                 android:id="@+id/fragment_dash_new_order"
-                android:background="@drawable/dashboard_buttoncolor"/>
-            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                 android:layout_width="200dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="My Profile"
-                android:textColor="@color/colorWhite"
-                android:padding="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/dashboard_buttoncolor"
                 android:gravity="center"
+                android:padding="10dp"
+                android:text="New Order"
+                android:textColor="@color/colorWhite" />
+
+            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                android:id="@+id/fragment_dash_my_profile"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_toRightOf="@+id/fragment_dash_new_order"
-                android:id="@+id/fragment_dash_my_profile"
-                android:background="@drawable/dashboard_buttoncolor"/>
+                android:layout_weight="1"
+                android:background="@drawable/dashboard_buttoncolor"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="My Profile"
+                android:textColor="@color/colorWhite" />
 
         </LinearLayout>
     </RelativeLayout>
