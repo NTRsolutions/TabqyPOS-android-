@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/custom_nav1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:id="@+id/menu_icon"
+                android:layout_width="@dimen/nav1_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_menu" />
+            </RelativeLayout>
+
+            <android.support.design.widget.NavigationView
+                android:visibility="gone"
+                android:id="@+id/nav_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/menu_icon"
+                android:layout_gravity="start"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorPrimary"
+                android:fitsSystemWindows="true"
+                android:theme="@style/NavigationDrawerStyle"
+                app:headerLayout="@layout/nav_header_dash_board"
+                app:itemIconTint="@drawable/drawer_item_color"
+                app:itemTextColor="@drawable/drawer_item_color"
+                app:menu="@menu/activity_dash_board_drawer" />
+
+            <RelativeLayout
+                android:id="@+id/dashboard"
+                android:layout_width="@dimen/nav1_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/menu_icon"
+                android:layout_marginTop="@dimen/margin_top_sidemenu">
+
+                <ImageView
+                    android:id="@+id/img_dash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_graph" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_dash"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/dashboard_text"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/navmenu_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/walkin_layout"
+                android:layout_width="@dimen/nav1_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dashboard"
+                android:layout_marginTop="@dimen/margin_top_sidemenu">
+
+                <ImageView
+                    android:id="@+id/img_walkin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_walk_in" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_walkin"
+                    android:layout_centerHorizontal="true"
+                    android:text="WalkIn"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/navmenu_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/crm_layout"
+                android:layout_width="@dimen/nav1_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/walkin_layout"
+                android:layout_marginTop="@dimen/margin_top_sidemenu">
+
+                <ImageView
+                    android:id="@+id/crm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_customer_relationship_management" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/crm"
+                    android:layout_centerHorizontal="true"
+                    android:text="CRM"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/navmenu_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/table"
+                android:layout_width="@dimen/nav1_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/crm_layout"
+                android:layout_marginTop="@dimen/margin_top_sidemenu">
+
+                <ImageView
+                    android:id="@+id/img_table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_table" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_table"
+                    android:layout_centerHorizontal="true"
+                    android:text="Table"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/navmenu_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/online_layout"
+                android:layout_width="@dimen/nav1_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/table"
+                android:layout_marginTop="@dimen/margin_top_sidemenu">
+
+                <ImageView
+                    android:id="@+id/img_online"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_shopping_cart" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_online"
+                    android:layout_centerHorizontal="true"
+                    android:text="Online"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/navmenu_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/charity"
+                android:layout_width="@dimen/nav1_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/online_layout"
+                android:layout_marginTop="@dimen/margin_top_sidemenu">
+
+                <ImageView
+                    android:id="@+id/img_charity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_donation" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_charity"
+                    android:layout_centerHorizontal="true"
+                    android:text="Charity"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/navmenu_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/order_status"
+                android:layout_width="@dimen/nav1_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/charity"
+                android:layout_marginTop="@dimen/margin_top_sidemenu">
+
+                <ImageView
+                    android:id="@+id/img_order_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_customer_relationship_management" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_order_status"
+                    android:layout_centerHorizontal="true"
+                    android:text="Order\nStatus"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/navmenu_text_size" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/main_frameDash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/custom_nav1" />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
