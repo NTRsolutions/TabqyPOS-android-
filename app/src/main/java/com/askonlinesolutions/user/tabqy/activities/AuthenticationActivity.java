@@ -26,7 +26,7 @@ public class AuthenticationActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_authentication);
         getFragmentManager().beginTransaction().add(R.id.main_frame,new LoginFragment()).commit();
-
+//
     }
 
 }
