@@ -53,7 +53,7 @@ public class NewOrderFragment extends Fragment {
 
     private void init(View view) {
         nav_menu = (RelativeLayout) view.findViewById(R.id.nav_menu);
-
+        ((MainDashBoardActivity)getActivity()).hideNav();
     }
 
 

@@ -7,7 +7,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        <FrameLayout
+            android:id="@+id/main_frameDash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
         <RelativeLayout
             android:id="@+id/custom_nav1"
             android:layout_width="wrap_content"
@@ -213,10 +216,6 @@
         </RelativeLayout>
 
 
-        <FrameLayout
-            android:id="@+id/main_frameDash"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
 
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

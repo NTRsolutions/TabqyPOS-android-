@@ -94,7 +94,6 @@
         android:layout_below="@+id/nav_menu"
         android:background="#F2F3F7">
 
-
         <android.support.v7.widget.CardView
             android:id="@+id/cardview_todaysorder"
             android:layout_width="wrap_content"

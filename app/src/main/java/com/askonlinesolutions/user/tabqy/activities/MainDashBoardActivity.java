@@ -45,18 +45,23 @@ public class MainDashBoardActivity extends AppCompatActivity implements Navigati
         setListeners();
 
     }
-public  void showHideNavView(){
 
-    if (flag == 0) {
-        nav_view.setVisibility(View.VISIBLE);
-        flag = 1;
-    } else if (flag == 1) {
-        nav_view.setVisibility(View.GONE);
-        flag = 0;
-    }
-}
-    private void setListeners() {
+    public void showHideNavView() {
+        if (flag == 0) {
+            nav_view.setVisibility(View.VISIBLE);
+            flag = 1;
+        } else if (flag == 1) {
+            nav_view.setVisibility(View.GONE);
+            flag = 0;
         }
+    }
+
+    public void hideNav() {
+        nav_view.setVisibility(View.GONE);
+    }
+
+    private void setListeners() {
+    }
 
     private void init() {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -66,8 +71,7 @@ public  void showHideNavView(){
         setContentView(R.layout.activity_main_dash_board);
         custom_nav1 = (RelativeLayout) findViewById(R.id.custom_nav1);
         nav_view = (NavigationView) findViewById(R.id.nav_view);
-        getFragmentManager().beginTransaction().replace(R.id.main_frameDash,new DashBoardFragment()).addToBackStack("").commit();
-
+        getFragmentManager().beginTransaction().replace(R.id.main_frameDash, new DashBoardFragment()).addToBackStack("").commit();
     }
 
 
