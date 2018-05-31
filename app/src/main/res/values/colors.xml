@@ -8,7 +8,7 @@
     <color name="colorBlack">#000</color>
     <color name="colorWhite">#fff</color>
     <color name="colorGrey">#FFC4C2C2</color>
-
+    <color name="colorappPink">#93014C</color>
     <color name="colorLightGrey">#FFECE9E9</color>
     <color name="button_orange">#FF7C00</color>
     <color name="nav_itemnotselectedtextcolor">#C9CDD3</color>
