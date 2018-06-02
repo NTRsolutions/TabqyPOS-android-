@@ -15,6 +15,7 @@
     <color name="nav_itemselectedtextcolor">#6DAF60</color>
     <color name="color_lightgreytext">#8b8b8c</color>
     <color name="dashboardtextcolor">#9C0760</color>
+    <color name="colorDarkGrey">#FF6B6B6E</color>
 
 
 </resources>

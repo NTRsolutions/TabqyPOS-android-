@@ -8,12 +8,18 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.askonlinesolutions.user.tabqy.R;
+import com.askonlinesolutions.user.tabqy.model.TestData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ProductViewHolder> {
     Activity mContext;
+    private List<TestData>testDataList ;
 
-    public CartAdapter(Activity mCtx) {
+    public CartAdapter(Activity mCtx,  List<TestData>testDataList) {
         this.mContext = mCtx;
+        this.testDataList = testDataList;
     }
 
     @NonNull
@@ -31,7 +37,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ProductViewHol
 
     @Override
     public int getItemCount() {
-        return 8;
+        return testDataList.size();
     }
 
     public class ProductViewHolder extends RecyclerView.ViewHolder {

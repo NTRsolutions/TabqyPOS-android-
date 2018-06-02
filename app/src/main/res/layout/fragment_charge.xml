@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ChargeFragment">
+
+    <include
+        android:id="@+id/top_statusbar"
+        layout="@layout/include_topsttausbar" />
+
+    <LinearLayout
+        android:layout_below="@+id/top_statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/nav1_width"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/top_catlist"
+                layout="@layout/category_list_layout"/>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+                <RelativeLayout
+                    android:id="@+id/group_cat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView
+                        android:layout_width ="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textColor="@color/colorBlack"
+                        android:id="@+id/fragment_charge_txtOrderno"
+                        android:text="@string/fragment_charge_txtOrderNo"/>
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:padding="10dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:layout_toRightOf="@+id/fragment_charge_txtOrderno"
+                        android:id="@+id/fragment_charge_txtOrdernoValue"
+                        android:text="35489788"/>
+
+                    <View
+                        android:layout_below="@+id/fragment_charge_txtOrderno"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:id="@+id/top_view"
+                        android:background="@color/colorLightGrey"/>
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/group_cat"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/deletetop"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_delete_button" />
+
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="Items(2)" />
+
+                <ImageView
+                    android:id="@+id/imgdot_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_dot" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/itemmainherader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deletetop"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_forward"
+                    android:visibility="invisible" />
+
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:text="Items name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:text="qty" />
+
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:text="price" />
+
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:text="SubTotal" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/dragged_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottom_buttons"
+                android:layout_below="@+id/itemmainherader"
+                android:background="#fff"
+                tools:listitem="@layout/row_itemlistmain" />
+            <TextView
+                android:id="@+id/textEmptyList"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="List is Empty!"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+
+            <LinearLayout
+                android:id="@+id/bottom_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorWhite"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:padding="10dp"
+                        android:textSize="@dimen/extra_small_size"
+                        android:text="@string/fragment_charge_txtsubtotal"
+                        android:textColor="@color/colorDarkGrey" />
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:padding="10dp"
+                        android:textSize="@dimen/extra_small_size"
+                        android:text="200.00"
+                        android:textColor="@color/colorDarkGrey" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:textSize="@dimen/extra_small_size"
+                        android:text="@string/fragment_charge_txttax"
+                        android:textColor="@color/colorDarkGrey" />
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/extra_small_size"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="40.00"
+                        android:textColor="@color/colorDarkGrey" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:textSize="@dimen/small_size"
+                        android:textStyle="bold"
+                        android:text="@string/fragment_charge_txttotal"
+                        android:textColor="@color/colorBlack" />
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textSize="@dimen/small_size"
+                        android:textStyle="bold"
+                        android:text="SAR 240.00"
+                        android:textColor="@color/colorBlack" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

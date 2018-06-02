@@ -39,7 +39,7 @@
                         android:layout_width="100dp"
                         android:layout_height="40dp" />
 
-                    <TextView
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                         android:id="@+id/group_cat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -62,9 +62,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cardview_expandable"
                 android:padding="@dimen/item_offset"
+                tools:listitem="@layout/row_itemlistmain"
                 android:scrollbars="horizontal" />
         </RelativeLayout>
-
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -87,7 +87,7 @@
                     android:layout_marginLeft="10dp"
                     android:src="@drawable/ic_delete_button" />
 
-                <TextView
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -120,7 +120,7 @@
                     android:src="@drawable/ic_forward"
                     android:visibility="invisible" />
 
-                <TextView
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -136,7 +136,7 @@
                     android:layout_weight="1"
                     android:text="qty" />
 
-                <TextView
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -144,7 +144,7 @@
                     android:layout_weight="1"
                     android:text="price" />
 
-                <TextView
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -161,7 +161,17 @@
                 android:layout_above="@+id/bottom_buttons"
                 android:layout_below="@+id/itemmainherader"
                 android:background="#fff"
-                tools:listitem="@layout/row_cartitem" />
+                tools:listitem="@layout/row_itemlistmain" />
+            <TextView
+                android:id="@+id/textEmptyList"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="List is Empty!"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
 
             <LinearLayout
                 android:id="@+id/bottom_buttons"
@@ -169,7 +179,7 @@
                 android:layout_height="50dp"
                 android:layout_alignParentBottom="true">
 
-                <TextView
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -179,13 +189,14 @@
                     android:text="@string/save"
                     android:textColor="#fff" />
 
-                <TextView
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="#A60054"
                     android:gravity="center"
+                    android:id="@+id/fragment_new_order_txtCharge"
                     android:text="@string/charge_btn"
                     android:textColor="#fff" />
             </LinearLayout>

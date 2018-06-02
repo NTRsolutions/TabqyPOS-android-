@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.askonlinesolutions.user.tabqy.R;
 import com.askonlinesolutions.user.tabqy.controller.NetworkController;
 import com.askonlinesolutions.user.tabqy.fragments.DashBoardFragment;
+import com.askonlinesolutions.user.tabqy.fragments.NewOrderFragment1;
 import com.google.gson.JsonObject;
 
 import org.json.JSONException;
@@ -32,7 +33,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class MainDashBoardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainDashBoardActivity extends AppCompatActivity implements
+        NavigationView.OnNavigationItemSelectedListener {
 
     private RelativeLayout custom_nav1;
     private NavigationView nav_view;
@@ -71,9 +73,8 @@ public class MainDashBoardActivity extends AppCompatActivity implements Navigati
         setContentView(R.layout.activity_main_dash_board);
         custom_nav1 = (RelativeLayout) findViewById(R.id.custom_nav1);
         nav_view = (NavigationView) findViewById(R.id.nav_view);
-        getFragmentManager().beginTransaction().replace(R.id.main_frameDash, new DashBoardFragment()).addToBackStack("").commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_frameDash, new DashBoardFragment()).commit();
     }
-
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {

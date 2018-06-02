@@ -19,4 +19,12 @@
     <string name="dashboard_text">Dashboard</string>
     <string name="save">Save</string>
     <string name="charge_btn">Charge  8.00</string>
+    
+    
+    <!--fragment charge -->
+    <string name="fragment_charge_txtsubtotal">Sub Total : </string>
+    <string name="fragment_charge_txttax">Tax : </string>
+    <string name="fragment_charge_txttotal">Total : </string>
+    <string name="fragment_charge_txtOrderNo">Order No </string>
+
 </resources>

@@ -10,6 +10,7 @@ import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.askonlinesolutions.user.tabqy.R;
 
@@ -17,7 +18,7 @@ import java.util.List;
 
 public class MainItemListAdapter extends RecyclerView.Adapter<MainItemListAdapter.ProductViewHolder> {
     Activity mContext;
-SipAudioCall.Listener mListener;
+    SipAudioCall.Listener mListener;
     public MainItemListAdapter(Activity mCtx) {
         this.mContext = mCtx;
 
@@ -34,7 +35,7 @@ SipAudioCall.Listener mListener;
     @Override
     public void onBindViewHolder(@NonNull MainItemListAdapter.ProductViewHolder holder, int position) {
         holder.cardview_expandable.setOnDragListener(new DragListener(mListener));
-
+        holder.txtPrice.setText("$ "+position);
     }
     public DragListener getDragInstance() {
         if (mListener != null) {
@@ -46,14 +47,16 @@ SipAudioCall.Listener mListener;
     }
     @Override
     public int getItemCount() {
-        return 8;
+        return 15;
     }
 
     public class ProductViewHolder extends RecyclerView.ViewHolder {
         CardView cardview_expandable;
+        TextView txtPrice;
         public ProductViewHolder(View itemView) {
             super(itemView);
             cardview_expandable=itemView.findViewById(R.id.cardview_expandable);
+            txtPrice = itemView.findViewById(R.id.item_price);
         }
     }
 

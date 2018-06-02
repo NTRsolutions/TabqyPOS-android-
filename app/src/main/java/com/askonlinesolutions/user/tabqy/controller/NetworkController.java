@@ -31,9 +31,7 @@ public class NetworkController {
                         //hiding the progressbar after completion
                         //  progressBar.setVisibility(View.INVISIBLE);
                         response_main = response;
-
                         Log.d("response",response_main);
-
                     }
                 },
                 new Response.ErrorListener() {

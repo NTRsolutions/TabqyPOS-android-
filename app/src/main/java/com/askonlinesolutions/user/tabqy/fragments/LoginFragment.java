@@ -1,10 +1,11 @@
 package com.askonlinesolutions.user.tabqy.fragments;
 
-import android.app.Fragment;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,14 +47,14 @@ public class LoginFragment extends Fragment {
         setListeners();
         return view;
     }
+    FragmentManager fragmentManager;
 
     private void setListeners() {
-
+        fragmentManager = getFragmentManager();
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new SupportingWidgets().callFragment(getActivity(), new PinFragment(), R.id.main_frame);
-
+                fragmentManager.beginTransaction().replace(R.id.main_frame, new PinFragment()).commit();
             }
         });
     }
