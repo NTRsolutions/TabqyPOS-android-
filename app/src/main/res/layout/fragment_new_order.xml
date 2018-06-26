@@ -187,6 +187,7 @@
                     android:background="#BB0162"
                     android:gravity="center"
                     android:text="@string/save"
+                    android:id="@+id/fragment_new_order_txtSave"
                     android:textColor="#fff" />
 
                 <com.askonlinesolutions.user.tabqy.customtext.CustomTextView

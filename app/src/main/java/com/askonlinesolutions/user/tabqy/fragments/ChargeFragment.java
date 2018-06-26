@@ -34,7 +34,6 @@ public class ChargeFragment extends Fragment {
     }
 
 
-
     private void setListeners() {
 
         nav_menu.setOnClickListener(new View.OnClickListener() {

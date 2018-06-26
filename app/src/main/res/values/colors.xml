@@ -16,6 +16,7 @@
     <color name="color_lightgreytext">#8b8b8c</color>
     <color name="dashboardtextcolor">#9C0760</color>
     <color name="colorDarkGrey">#FF6B6B6E</color>
+    <color name="colorlightBlack">#2d2c2c</color>
 
 
 </resources>

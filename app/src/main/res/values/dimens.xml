@@ -19,4 +19,5 @@
     <dimen name="navmenu_text_size">12dp</dimen>
     <dimen name="textsizedashboard">24dp</dimen>
     <dimen name="item_offset">4dp</dimen>
+    <dimen name="activity_horizontal_margin_status">8dp</dimen>
 </resources>

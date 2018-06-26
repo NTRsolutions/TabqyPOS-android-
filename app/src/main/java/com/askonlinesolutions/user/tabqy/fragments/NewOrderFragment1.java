@@ -1,5 +1,6 @@
 package com.askonlinesolutions.user.tabqy.fragments;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.graphics.Point;
@@ -21,6 +22,7 @@ import android.widget.TextView;
 
 import com.askonlinesolutions.user.tabqy.R;
 import com.askonlinesolutions.user.tabqy.activities.MainDashBoardActivity;
+import com.askonlinesolutions.user.tabqy.activities.SearchActivity;
 import com.askonlinesolutions.user.tabqy.adapter.CartAdapter;
 import com.askonlinesolutions.user.tabqy.adapter.MainItemListAdapter;
 import com.askonlinesolutions.user.tabqy.adapter.MainItemListAdapter1;
@@ -43,7 +45,7 @@ public class NewOrderFragment1 extends Fragment implements CallbackItemTouch, Ma
     private View view;
     private RelativeLayout nav_menu;
     private MainItemListAdapter1 adapter;
-    private ImageView imgdot_menu;
+    private ImageView imgdot_menu, img_search;
 
     public NewOrderFragment1() {
         // Required empty public constructor
@@ -76,7 +78,8 @@ public class NewOrderFragment1 extends Fragment implements CallbackItemTouch, Ma
             }
         });
         txtChrage.setOnClickListener(this);
-
+        img_search.setOnClickListener(this);
+        txt_save.setOnClickListener(this);
         imgdot_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -140,7 +143,7 @@ public class NewOrderFragment1 extends Fragment implements CallbackItemTouch, Ma
     private List<TestData>testDataList = new ArrayList<>();
 
     public RecyclerView recycler_viewmain, dragged_items;
-    private TextView txtChrage;
+    private TextView txtChrage, txt_save;
 
     private void init(View view) {
         nav_menu = (RelativeLayout) view.findViewById(R.id.nav_menu);
@@ -149,6 +152,8 @@ public class NewOrderFragment1 extends Fragment implements CallbackItemTouch, Ma
         imgdot_menu = (ImageView) view.findViewById(R.id.imgdot_menu);
         dragged_items = (RecyclerView) view.findViewById(R.id.dragged_items);
         txtChrage = view.findViewById(R.id.fragment_new_order_txtCharge);
+        img_search = view.findViewById(R.id.img_search);
+        txt_save = view.findViewById(R.id.fragment_new_order_txtSave);
 
         for (int i=0;i<15;i++){
             TestData testData = new TestData();
@@ -188,6 +193,15 @@ public class NewOrderFragment1 extends Fragment implements CallbackItemTouch, Ma
             case R.id.fragment_new_order_txtCharge:
                 fragmentManager = getFragmentManager();
                 new SupportingWidgets().callFragment(getActivity(), new ChargeFragment(),fragmentManager,
+                        R.id.main_frameDash,NewOrderFragment1.class.getName());
+
+                break;
+            case R.id.img_search:
+                startActivity(new Intent(getActivity(), SearchActivity.class));
+                break;
+            case R.id.fragment_new_order_txtSave:
+                fragmentManager = getFragmentManager();
+                new SupportingWidgets().callFragment(getActivity(), new SaveFragment(),fragmentManager,
                         R.id.main_frameDash,NewOrderFragment1.class.getName());
 
                 break;

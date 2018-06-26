@@ -10,6 +10,7 @@ import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Window;
 import android.view.WindowManager;
 
 import com.askonlinesolutions.user.tabqy.R;

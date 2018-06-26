@@ -34,7 +34,8 @@
             android:name=".activities.MainDashBoardActivity"
             android:label="@string/title_activity_main_dash_board"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.TestActivity"></activity>
+        <activity android:name=".activities.TestActivity" />
+        <activity android:name=".activities.SearchActivity"></activity>
     </application>
 
 </manifest>
