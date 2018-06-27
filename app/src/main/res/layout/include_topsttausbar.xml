@@ -7,7 +7,7 @@
     <RelativeLayout
         android:id="@+id/nav_menu"
         android:layout_width="@dimen/nav1_width"
-        android:layout_height="80dp"
+        android:layout_height="@dimen/nav1_width"
         android:background="@color/colorPrimary">
 
         <ImageView
@@ -135,40 +135,63 @@
                 android:layout_weight="1"
                 android:paddingTop="@dimen/nav_header_vertical_spacing"
                 android:text="Customer"
+                android:textSize="@dimen/extra_small_size"
                 android:textColor="@color/color_lightgreytext" />
+            <View
+                android:layout_marginLeft="2dp"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorGrey"/>
 
-            <ImageView
+            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                 android:id="@+id/img_scan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:text="Scan"
+                android:textSize="@dimen/extra_small_size"
+                android:gravity="center"
                 android:contentDescription="@string/nav_header_desc"
                 android:paddingTop="@dimen/nav_header_vertical_spacing"
-                android:src="@drawable/ic_qr_code" />
+                android:drawableTop="@drawable/ic_qr_code" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorGrey"/>
 
-            <ImageView
+            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                 android:id="@+id/img_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:text="Search"
+                android:textSize="@dimen/extra_small_size"
+                android:gravity="center"
                 android:contentDescription="@string/nav_header_desc"
                 android:paddingTop="@dimen/nav_header_vertical_spacing"
-                android:src="@drawable/ic_magnifying_glass" />
+                android:drawableTop="@drawable/ic_magnifying_glass" />
 
-            <ImageView
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorGrey"/>
+
+            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                 android:id="@+id/img_adduser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:text="Add"
+                android:textSize="@dimen/extra_small_size"
+                android:gravity="center"
                 android:contentDescription="@string/nav_header_desc"
                 android:paddingTop="@dimen/nav_header_vertical_spacing"
-                android:src="@drawable/ic_add" />
+                android:drawableTop="@drawable/ic_add_user" />
 
 
         </LinearLayout>

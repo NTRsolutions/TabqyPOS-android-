@@ -33,9 +33,7 @@ public class ChargeFragment extends Fragment {
         return view;
     }
 
-
     private void setListeners() {
-
         nav_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

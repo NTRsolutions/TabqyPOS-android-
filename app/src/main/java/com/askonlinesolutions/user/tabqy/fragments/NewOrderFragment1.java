@@ -45,7 +45,8 @@ public class NewOrderFragment1 extends Fragment implements CallbackItemTouch, Ma
     private View view;
     private RelativeLayout nav_menu;
     private MainItemListAdapter1 adapter;
-    private ImageView imgdot_menu, img_search;
+    private ImageView imgdot_menu;
+    TextView img_search, txt_add_user;
 
     public NewOrderFragment1() {
         // Required empty public constructor
@@ -77,6 +78,7 @@ public class NewOrderFragment1 extends Fragment implements CallbackItemTouch, Ma
                 ((MainDashBoardActivity) getActivity()).showHideNavView();
             }
         });
+        txt_add_user.setOnClickListener(this);
         txtChrage.setOnClickListener(this);
         img_search.setOnClickListener(this);
         txt_save.setOnClickListener(this);
@@ -146,6 +148,7 @@ public class NewOrderFragment1 extends Fragment implements CallbackItemTouch, Ma
     private TextView txtChrage, txt_save;
 
     private void init(View view) {
+        txt_add_user = view.findViewById(R.id.img_adduser);
         nav_menu = (RelativeLayout) view.findViewById(R.id.nav_menu);
         ((MainDashBoardActivity) getActivity()).hideNav();
         recycler_viewmain = (RecyclerView) view.findViewById(R.id.recycler_viewmain);
@@ -202,6 +205,12 @@ public class NewOrderFragment1 extends Fragment implements CallbackItemTouch, Ma
             case R.id.fragment_new_order_txtSave:
                 fragmentManager = getFragmentManager();
                 new SupportingWidgets().callFragment(getActivity(), new SaveFragment(),fragmentManager,
+                        R.id.main_frameDash,NewOrderFragment1.class.getName());
+
+                break;
+            case R.id.img_adduser:
+                fragmentManager = getFragmentManager();
+                new SupportingWidgets().callFragment(getActivity(), new AddUserFragment(),fragmentManager,
                         R.id.main_frameDash,NewOrderFragment1.class.getName());
 
                 break;

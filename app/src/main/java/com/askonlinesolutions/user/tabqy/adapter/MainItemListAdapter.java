@@ -61,7 +61,6 @@ public class MainItemListAdapter extends RecyclerView.Adapter<MainItemListAdapte
     }
 
 
-
     public class DragListener implements View.OnDragListener {
 
         boolean isDropped = false;
