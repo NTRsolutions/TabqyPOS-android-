@@ -1,5 +1,6 @@
 package com.askonlinesolutions.user.tabqy.fragments;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.content.Context;
@@ -9,7 +10,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,16 +23,11 @@ import android.widget.TextView;
 import com.askonlinesolutions.user.tabqy.R;
 import com.askonlinesolutions.user.tabqy.activities.MainDashBoardActivity;
 import com.askonlinesolutions.user.tabqy.activities.SearchActivity;
-import com.askonlinesolutions.user.tabqy.adapter.CartAdapter;
-import com.askonlinesolutions.user.tabqy.adapter.MainItemListAdapter;
 import com.askonlinesolutions.user.tabqy.adapter.MainItemListAdapter1;
-import com.askonlinesolutions.user.tabqy.callbacks.MyItemTouchHelperCallback;
 import com.askonlinesolutions.user.tabqy.interfaces.CallbackItemTouch;
 import com.askonlinesolutions.user.tabqy.model.TestData;
 import com.askonlinesolutions.user.tabqy.utils.ItemOffsetDecoration;
 import com.askonlinesolutions.user.tabqy.utils.SupportingWidgets;
-
-import junit.framework.Test;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -45,8 +40,8 @@ public class NewOrderFragment1 extends Fragment implements CallbackItemTouch, Ma
     private View view;
     private RelativeLayout nav_menu;
     private MainItemListAdapter1 adapter;
-    private ImageView imgdot_menu;
-    TextView img_search, txt_add_user;
+    private ImageView imgdot_menu, img_delete;
+    TextView img_search, txt_add_user, txt_add_note, txt_add_discount;
 
     public NewOrderFragment1() {
         // Required empty public constructor
@@ -82,6 +77,9 @@ public class NewOrderFragment1 extends Fragment implements CallbackItemTouch, Ma
         txtChrage.setOnClickListener(this);
         img_search.setOnClickListener(this);
         txt_save.setOnClickListener(this);
+        img_delete.setOnClickListener(this);
+        txt_add_discount.setOnClickListener(this);
+        txt_add_note.setOnClickListener(this);
         imgdot_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -157,12 +155,16 @@ public class NewOrderFragment1 extends Fragment implements CallbackItemTouch, Ma
         txtChrage = view.findViewById(R.id.fragment_new_order_txtCharge);
         img_search = view.findViewById(R.id.img_search);
         txt_save = view.findViewById(R.id.fragment_new_order_txtSave);
+        img_delete = view.findViewById(R.id.fragment_new_order_delete);
+        txt_add_note = view.findViewById(R.id.add_note);
+        txt_add_discount = view.findViewById(R.id.add_discount);
 
         for (int i=0;i<15;i++){
             TestData testData = new TestData();
             testData.setName("Coca Cola");
             testDataList.add(testData);
         }
+
         LinearLayoutManager verticalLayoutmanager
                 = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         dragged_items.setLayoutManager(verticalLayoutmanager);
@@ -206,14 +208,95 @@ public class NewOrderFragment1 extends Fragment implements CallbackItemTouch, Ma
                 fragmentManager = getFragmentManager();
                 new SupportingWidgets().callFragment(getActivity(), new SaveFragment(),fragmentManager,
                         R.id.main_frameDash,NewOrderFragment1.class.getName());
-
                 break;
             case R.id.img_adduser:
                 fragmentManager = getFragmentManager();
                 new SupportingWidgets().callFragment(getActivity(), new AddUserFragment(),fragmentManager,
                         R.id.main_frameDash,NewOrderFragment1.class.getName());
-
+                break;
+            case R.id.fragment_new_order_delete:
+                createDeleteDialog();
+                break;
+            case R.id.add_note:
+                addNoteDialog();
+                break;
+            case R.id.add_discount:
+                addDiscoountDialog();
                 break;
         }
     }
+
+    private void createDeleteDialog(){
+        final Dialog dialog= new Dialog(getContext());
+        dialog.setContentView(R.layout.dialog_delete_item);
+
+        dialog.findViewById(R.id.dialog_del_cancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.findViewById(R.id.dialog_del_clear).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.setCancelable(false);
+        dialog.getWindow().setBackgroundDrawable(null);
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        dialog.show();
+
+    }
+
+    private void addNoteDialog(){
+        final Dialog dialog= new Dialog(getContext());
+        dialog.setContentView(R.layout.dialog_add_note);
+
+        dialog.findViewById(R.id.dialog_add_note_cancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.findViewById(R.id.dialog_note_add).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.setCancelable(false);
+        dialog.getWindow().setBackgroundDrawable(null);
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        dialog.show();
+
+    }
+
+    private void addDiscoountDialog(){
+        final Dialog dialog= new Dialog(getContext());
+        dialog.setContentView(R.layout.dialog_add_discount);
+
+        dialog.findViewById(R.id.dialog_add_dis_cancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.findViewById(R.id.dialog_discount_add).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.setCancelable(false);
+        dialog.getWindow().setBackgroundDrawable(null);
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        dialog.show();
+
+    }
+
+
 }

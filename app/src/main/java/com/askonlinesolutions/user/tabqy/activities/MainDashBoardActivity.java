@@ -34,9 +34,9 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class MainDashBoardActivity extends AppCompatActivity implements
-        NavigationView.OnNavigationItemSelectedListener {
+        NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
-    private RelativeLayout custom_nav1;
+    private RelativeLayout custom_nav1,dashboard, walkin_layout;
     private NavigationView nav_view;
     int flag = 0;
 
@@ -63,6 +63,8 @@ public class MainDashBoardActivity extends AppCompatActivity implements
     }
 
     private void setListeners() {
+        dashboard.setOnClickListener(this);
+        walkin_layout.setOnClickListener(this );
     }
 
     private void init() {
@@ -73,7 +75,10 @@ public class MainDashBoardActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_main_dash_board);
         custom_nav1 = (RelativeLayout) findViewById(R.id.custom_nav1);
         nav_view = (NavigationView) findViewById(R.id.nav_view);
+        dashboard = findViewById(R.id.dashboard);
+        walkin_layout = findViewById(R.id.walkin_layout);
         getSupportFragmentManager().beginTransaction().replace(R.id.main_frameDash, new DashBoardFragment()).commit();
+
     }
 
     @Override
@@ -101,5 +106,17 @@ public class MainDashBoardActivity extends AppCompatActivity implements
         }
 
         return true;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.walkin_layout:
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_frameDash, new NewOrderFragment1()).commit();
+                break;
+            case R.id.dashboard:
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_frameDash, new DashBoardFragment()).commit();
+                break;
+        }
     }
 }
