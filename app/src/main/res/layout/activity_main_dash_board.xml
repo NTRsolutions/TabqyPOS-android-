@@ -47,8 +47,10 @@
                 app:itemTextColor="@drawable/drawer_item_color"
                 app:menu="@menu/activity_dash_board_drawer" />
 
+
             <RelativeLayout
                 android:id="@+id/dashboard"
+                android:onClick="nav_click"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/menu_icon"
@@ -76,7 +78,8 @@
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/dashboard"
-                android:layout_marginTop="@dimen/margin_top_sidemenu">
+                android:layout_marginTop="@dimen/margin_top_sidemenu"
+                android:onClick="nav_click">
 
                 <ImageView
                     android:id="@+id/img_walkin"
@@ -95,6 +98,8 @@
             </RelativeLayout>
 
             <RelativeLayout
+
+                android:onClick="nav_click"
                 android:id="@+id/crm_layout"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
@@ -119,6 +124,8 @@
             </RelativeLayout>
 
             <RelativeLayout
+
+                android:onClick="nav_click"
                 android:id="@+id/table"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
@@ -143,6 +150,8 @@
             </RelativeLayout>
 
             <RelativeLayout
+
+                android:onClick="nav_click"
                 android:id="@+id/online_layout"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
@@ -167,6 +176,8 @@
             </RelativeLayout>
 
             <RelativeLayout
+
+                android:onClick="nav_click"
                 android:id="@+id/charity"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
@@ -191,6 +202,8 @@
             </RelativeLayout>
 
             <RelativeLayout
+
+                android:onClick="nav_click"
                 android:id="@+id/order_status"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"

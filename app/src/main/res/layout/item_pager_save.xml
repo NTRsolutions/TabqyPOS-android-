@@ -36,7 +36,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_edit_pink"
+            android:src="@drawable/ic_arrow_left"
             android:padding="10dp"/>
         <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
             android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_edit_pink"
+            android:src="@drawable/ic_arrow_right"
             android:padding="10dp"
             android:layout_gravity="right"/>
 

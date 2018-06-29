@@ -45,7 +45,7 @@
     <string name="fragment_save_txt_delete">Delete</string>
     <string name="fragment_save_txt_add_address">Add Address</string>
     <string name="fragment_save_txt_place_order">Place New Order</string>
-    
+
     <!--dialog delete item -->
     <string name="dialog_del_clear_title">Clear Items </string>
     <string name="dialog_del_clear_content">Are you sure you want to clear the items? </string>
