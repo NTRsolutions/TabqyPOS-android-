@@ -235,6 +235,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
+                        android:id="@+id/img_delete"
                         android:src="@drawable/ic_delete_button" />
 
                     <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
@@ -305,21 +306,12 @@
                 </LinearLayout>
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/dragged_items"
+                    android:id="@+id/crm_dragged_items"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@+id/itemmainherader"
                     android:background="#fff"
                     tools:listitem="@layout/row_itemlistmain" />
-                <TextView
-                    android:id="@+id/textEmptyList"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="List is Empty!"
-                    android:visibility="gone"
-                    tools:visibility="visible" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

@@ -1,39 +1,20 @@
 package com.askonlinesolutions.user.tabqy.activities;
 
-import android.annotation.SuppressLint;
-import android.app.DatePickerDialog;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.DatePicker;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import com.askonlinesolutions.user.tabqy.R;
-import com.askonlinesolutions.user.tabqy.controller.NetworkController;
 import com.askonlinesolutions.user.tabqy.fragments.DashBoardFragment;
-import com.askonlinesolutions.user.tabqy.fragments.NewOrderFragment1;
 import com.askonlinesolutions.user.tabqy.fragments.nav.CRMFragment;
-import com.google.gson.JsonObject;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+import com.askonlinesolutions.user.tabqy.fragments.nav.NewOrderFragment;
 
 public class MainDashBoardActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
@@ -88,6 +69,7 @@ public class MainDashBoardActivity extends AppCompatActivity implements
         charity_layout = findViewById(R.id.charity);
         order_status_layout = findViewById(R.id.order_status);
 
+        dashboardLayout.setBackgroundColor(getResources().getColor(R.color.colorDark));
         getSupportFragmentManager().beginTransaction().replace(R.id.main_frameDash, new DashBoardFragment()).commit();
 
     }
@@ -119,8 +101,6 @@ public class MainDashBoardActivity extends AppCompatActivity implements
         return true;
     }
 
-
-
     @Override
     public void onClick(View v) {
 
@@ -132,7 +112,7 @@ public class MainDashBoardActivity extends AppCompatActivity implements
         switch (view.getId()){
             case R.id.walkin_layout:
                 walkin_layoutLayout.setBackgroundColor(getResources().getColor(R.color.colorDark));
-                getSupportFragmentManager().beginTransaction().replace(R.id.main_frameDash, new NewOrderFragment1()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_frameDash, new NewOrderFragment()).commit();
                 break;
             case R.id.dashboard:
                 dashboardLayout.setBackgroundColor(getResources().getColor(R.color.colorDark));

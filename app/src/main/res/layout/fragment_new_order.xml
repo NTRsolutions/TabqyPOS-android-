@@ -115,24 +115,21 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_weight="0.5"
+                    android:gravity="center"
                     android:src="@drawable/ic_forward"
                     android:visibility="invisible" />
 
                 <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_centerVertical="true"
+                    android:gravity="center"
                     android:layout_weight="1"
                     android:text="Items name" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
+                    android:gravity="center"
                     android:layout_centerVertical="true"
                     android:layout_weight="1"
                     android:text="Qty" />
@@ -140,28 +137,19 @@
                 <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_centerVertical="true"
+                    android:gravity="center"
                     android:layout_weight="1"
                     android:text="Price" />
 
                 <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_centerVertical="true"
+                    android:gravity="center"
                     android:layout_weight="1"
                     android:text="SubTotal" />
 
             </LinearLayout>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/dragged_items"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/itemmainherader"
-                android:background="#fff"
-                tools:listitem="@layout/row_itemlistmain" />
             <TextView
                 android:id="@+id/textEmptyList"
                 android:layout_width="match_parent"
@@ -169,12 +157,13 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="List is Empty!"
-                tools:visibility="visible" />
+                tools:visibility="gone" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/walkin_right_bottom"
                 android:orientation="vertical"
                 android:background="@color/colorWhite"
                 android:layout_alignParentBottom="true">
@@ -197,10 +186,11 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
+                        android:id="@+id/walkin_sub_total"
                         android:gravity="right"
                         android:padding="10dp"
                         android:textSize="@dimen/extra_small_size"
-                        android:text="200.00"
+                        android:text="12.00"
                         android:textColor="@color/colorDarkGrey" />
 
                 </LinearLayout>
@@ -250,10 +240,11 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
+                        android:id="@+id/walkin_total"
                         android:gravity="right"
                         android:textSize="@dimen/small_size"
                         android:textStyle="bold"
-                        android:text="SAR 240.00"
+                        android:text="SAR 52.00"
                         android:textColor="@color/colorBlack" />
 
                 </LinearLayout>
@@ -287,7 +278,22 @@
                 </LinearLayout>
 
             </LinearLayout>
-        </RelativeLayout>
+
+            <!--<android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">-->
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/dragged_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/itemmainherader"
+                    android:layout_above="@+id/walkin_right_bottom"
+                    android:background="#fff"
+                    android:scrollbars="none"/>
+
+          <!--  </android.support.v4.widget.NestedScrollView>-->
+            </RelativeLayout>
 
     </LinearLayout>
 

@@ -11,12 +11,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
+        android:id="@+id/dialog_del_txt_title"
         android:textColor="@color/colorBlack"
         android:text="@string/dialog_del_clear_title"/>
     <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
+        android:id="@+id/dialog_del_txt_content"
         android:textColor="@color/colorlightBlack"
         android:text="@string/dialog_del_clear_content"/>
 

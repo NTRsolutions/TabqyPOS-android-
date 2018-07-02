@@ -59,4 +59,8 @@
     <!--dialog add note item -->
     <string name="dialog_add_dis_title">Add Discount </string>
 
+    <!--dialog delete address-->
+    <string name="dialog_add_address_content">Are you sure you want to delete the address? </string>
+    <string name="dialog_add_address_delete">Delete Address</string>
+
 </resources>

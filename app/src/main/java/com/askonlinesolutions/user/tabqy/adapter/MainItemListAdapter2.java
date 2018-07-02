@@ -6,31 +6,64 @@ import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.askonlinesolutions.user.tabqy.R;
-import com.askonlinesolutions.user.tabqy.activities.test.CustomList;
-import com.askonlinesolutions.user.tabqy.activities.test.CustomListAdapter;
 import com.askonlinesolutions.user.tabqy.model.TestData;
+
 import java.util.List;
 
-public class MainItemListAdapter1 extends RecyclerView.Adapter<MainItemListAdapter1.ProductViewHolder> {
+public class MainItemListAdapter2 extends RecyclerView.Adapter<MainItemListAdapter2.ProductViewHolder> {
     Activity mContext;
     private List<TestData>testDataList ;
     Listener mListener;
 
-    public MainItemListAdapter1(Activity mContext, List<TestData> testDataList, Listener mListener) {
+
+    private Interface_MainItemListAdapter2 click;
+
+    public MainItemListAdapter2(Activity mContext, List<TestData> testDataList, Listener mListener,
+                                Interface_MainItemListAdapter2 click) {
         this.mContext = mContext;
         this.testDataList = testDataList;
         this.mListener = mListener;
+        this.click = click;
     }
+
+    public class ProductViewHolder extends RecyclerView.ViewHolder {
+        CardView cardview_expandable;
+        ConstraintLayout constraintLayout ;
+        TextView txtPrice;
+        public ProductViewHolder(View itemView) {
+            super(itemView);
+            cardview_expandable=itemView.findViewById(R.id.cardview_expandable);
+            txtPrice = itemView.findViewById(R.id.item_price);
+            constraintLayout = itemView.findViewById(R.id.cardview_expandable_view);
+
+            constraintLayout.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    ClipData data = ClipData.newPlainText("", "");
+                    View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
+                    view.startDrag(data, shadowBuilder, view, 0);
+                    view.setVisibility(View.INVISIBLE);
+
+                    click.method(getAdapterPosition());
+
+                    return true;
+                }
+            });
+
+        }
+    }
+
+
+
+
 
     public interface Listener{
         void setEmptyList(boolean visibility);
@@ -38,18 +71,18 @@ public class MainItemListAdapter1 extends RecyclerView.Adapter<MainItemListAdapt
 
     @NonNull
     @Override
-    public MainItemListAdapter1.ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MainItemListAdapter2.ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        View view = inflater.inflate(R.layout.row_itemlistmain, parent, false);
+        View view = inflater.inflate(R.layout.row_itemlistmain, null);
         return new ProductViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MainItemListAdapter1.ProductViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MainItemListAdapter2.ProductViewHolder holder, int position) {
 
         holder.constraintLayout.setTag(position);
         holder.txtPrice.setText("$ "+position);
-        holder.constraintLayout.setOnLongClickListener(new View.OnLongClickListener() {
+       /* holder.constraintLayout.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 ClipData data = ClipData.newPlainText("", "");
@@ -59,7 +92,7 @@ public class MainItemListAdapter1 extends RecyclerView.Adapter<MainItemListAdapt
                 return true;
             }
         });
-        holder.constraintLayout.setOnDragListener(new DragListener(mListener));
+        holder.constraintLayout.setOnDragListener(new DragListener(mListener));*/
     }
 
 
@@ -76,20 +109,10 @@ public class MainItemListAdapter1 extends RecyclerView.Adapter<MainItemListAdapt
         return testDataList.size();
     }
 
-    public class ProductViewHolder extends RecyclerView.ViewHolder {
-        CardView cardview_expandable;
-        ConstraintLayout constraintLayout ;
-        TextView txtPrice;
-        public ProductViewHolder(View itemView) {
-            super(itemView);
-            cardview_expandable=itemView.findViewById(R.id.cardview_expandable);
-            txtPrice = itemView.findViewById(R.id.item_price);
-            constraintLayout = itemView.findViewById(R.id.cardview_expandable_view);
-        }
-    }
 
 
-    public class DragListener implements View.OnDragListener {
+
+   /* public class DragListener implements View.OnDragListener {
         boolean isDropped = false;
 
         Listener mListener;
@@ -106,33 +129,18 @@ public class MainItemListAdapter1 extends RecyclerView.Adapter<MainItemListAdapt
                     break;
 
                 case DragEvent.ACTION_DRAG_ENTERED:
-                    Log.d("Hiiiii", "Action is DragEvent.ACTION_DRAG_ENTERED");
-                    int x_cord = (int) event.getX();
-                    int y_cord = (int) event.getY();
-//                    Log.d("XXYY", x_cord + "  " + y_cord);
-
-                    //  v.setBackgroundColor(Color.LTGRAY);
+                  //  v.setBackgroundColor(Color.LTGRAY);
                     break;
 
                 case DragEvent.ACTION_DRAG_EXITED:
-                    int x_cord1 = (int) event.getX();
-                    int y_cord1 = (int) event.getY();
-                    Log.d("XXYY", x_cord1 + "  " + y_cord1);
-                    // v.setBackgroundColor(Color.YELLOW);
-//                    Toast.makeText(mContext, "outside", Toast.LENGTH_SHORT).show();
+                   // v.setBackgroundColor(Color.YELLOW);
                     break;
 
                 case DragEvent.ACTION_DROP:
 
                     Toast.makeText(mContext, "droped", Toast.LENGTH_SHORT).show();
-               /*     View view = (View) event.getLocalState();
-                    ViewGroup owner = (ViewGroup) view.getParent();
-                    owner.removeView(view);
-                    ConstraintLayout container = (ConstraintLayout) v;
-                    container.addView(view);
-                    view.setVisibility(View.VISIBLE);*/
 
-                   /* isDropped = true;
+                   *//* isDropped = true;
                     int positionSource = -1;
                     int positionTarget = -1;
 
@@ -180,7 +188,7 @@ public class MainItemListAdapter1 extends RecyclerView.Adapter<MainItemListAdapt
                         if (v.getId() == R.id.textEmptyList) {
                             mListener.setEmptyList(false);
                         }
-                    }*/
+                    }*//*
                     break;
 
                 case DragEvent.ACTION_DRAG_ENDED:
@@ -200,5 +208,11 @@ public class MainItemListAdapter1 extends RecyclerView.Adapter<MainItemListAdapt
         }
 
     }
+*/
+    public interface Interface_MainItemListAdapter2 {
+        public void method(int position);
+    }
+
+
 
 }
