@@ -96,7 +96,8 @@ public class CRMFragment extends Fragment implements CallbackItemTouch, MainItem
         dragged_items.setAdapter(adapterWalkinDraggedItems);
 
 
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), SupportingWidgets.calculateNoOfColumns(getActivity())));
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),
+                SupportingWidgets.calculateNoOfColumns(getActivity())));
         ItemOffsetDecoration itemDecoration = new ItemOffsetDecoration(getActivity(), R.dimen.item_offset);
         recyclerView.addItemDecoration(itemDecoration);
 

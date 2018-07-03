@@ -14,7 +14,11 @@ import android.widget.RelativeLayout;
 import com.askonlinesolutions.user.tabqy.R;
 import com.askonlinesolutions.user.tabqy.fragments.DashBoardFragment;
 import com.askonlinesolutions.user.tabqy.fragments.nav.CRMFragment;
+import com.askonlinesolutions.user.tabqy.fragments.nav.CharityFragment;
 import com.askonlinesolutions.user.tabqy.fragments.nav.NewOrderFragment;
+import com.askonlinesolutions.user.tabqy.fragments.nav.OnlineFragment;
+import com.askonlinesolutions.user.tabqy.fragments.nav.OrderStatusFragment;
+import com.askonlinesolutions.user.tabqy.fragments.nav.TableFragment;
 
 public class MainDashBoardActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
@@ -125,19 +129,19 @@ public class MainDashBoardActivity extends AppCompatActivity implements
                 break;
             case R.id.table:
                 table_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
-//                getSupportFragmentManager().beginTransaction().replace(R.id.main_frameDash, new DashBoardFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_frameDash, new TableFragment()).commit();
                 break;
                 case R.id.online_layout:
                 online_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
-//                getSupportFragmentManager().beginTransaction().replace(R.id.main_frameDash, new NewOrderFragment1()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_frameDash, new OnlineFragment()).commit();
                 break;
             case R.id.charity:
                 charity_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
-//                getSupportFragmentManager().beginTransaction().replace(R.id.main_frameDash, new DashBoardFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_frameDash, new CharityFragment()).commit();
                 break;
             case R.id.order_status:
                 order_status_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
-//                getSupportFragmentManager().beginTransaction().replace(R.id.main_frameDash, new DashBoardFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_frameDash, new OrderStatusFragment()).commit();
                 break;
             default:
                 break;

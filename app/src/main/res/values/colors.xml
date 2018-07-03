@@ -19,5 +19,10 @@
     <color name="colorDarkGrey">#FF6B6B6E</color>
     <color name="colorlightBlack">#2d2c2c</color>
 
+    <color name="bg_light_green">#AD9F00</color>
+    <color name="bg_dark_green">#00A451</color>
+
+    <color name="background">#ECF0F1</color>
+
 
 </resources>
