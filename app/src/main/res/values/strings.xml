@@ -31,6 +31,12 @@
     <string name="delivery_in_progress">Deliver - InProgress</string>
     <string name="waiting_for_pick">Waiting for Pick</string>
     <string name="new_orders">New Orders</string>
+    <string name="cash">Cash</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="date">Date</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+
 
     <!--fragment charge -->
     <string name="fragment_charge_txtsubtotal">Sub Total : </string>

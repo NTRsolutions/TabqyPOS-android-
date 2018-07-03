@@ -123,12 +123,88 @@
             android:layout_height="120dp"
             android:padding="@dimen/size_5">
         </LinearLayout>
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@color/colorWhite"
-            android:padding="@dimen/size_5">
-        </LinearLayout>
+            android:padding="@dimen/size_10">
+            
+            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Life Time Order: 2567"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/size_12"
+                android:gravity="center"
+                android:layout_alignParentLeft="true" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical">
+
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Filter by"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_12"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/size_10"
+                    android:layout_alignParentLeft="true"/>
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="@string/cash"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_9"
+                    android:gravity="center"
+                    android:background="@drawable/shape_background_bg"
+                    android:layout_marginRight="@dimen/size_3"
+                    android:layout_alignParentLeft="true"/>
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="@string/credit_card"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_9"
+                    android:gravity="center"
+                    android:background="@drawable/shape_background_bg"
+                    android:layout_marginRight="@dimen/size_3"
+                    android:layout_alignParentLeft="true"/>
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="@string/date"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_9"
+                    android:gravity="center"
+                    android:background="@drawable/shape_background_bg"
+                    android:layout_marginRight="@dimen/size_3"
+                    android:layout_alignParentLeft="true"/>
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="@string/month"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_9"
+                    android:gravity="center"
+                    android:background="@drawable/shape_background_bg"
+                    android:layout_marginRight="@dimen/size_3"
+                    android:layout_alignParentLeft="true"/>
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="@string/year"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_9"
+                    android:gravity="center"
+                    android:background="@drawable/shape_background_bg"
+                    android:layout_alignParentLeft="true"/>
+
+            </LinearLayout>
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
