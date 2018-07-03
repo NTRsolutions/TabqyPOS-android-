@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F1F2F7">
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview_expandable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F1F2F7">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F1F2F7">
+
+            <ExpandableListView
+                android:id="@+id/categories_list"
+                android:layout_width="100dp"
+                android:layout_height="40dp" />
+
+            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                android:id="@+id/group_cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/categories_list"
+                android:text="Hot Drinks" />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/group_cat"
+                android:scrollbars="horizontal"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.v7.widget.CardView>

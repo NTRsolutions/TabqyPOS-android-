@@ -35,9 +35,7 @@ public class CustomTextButtonTextView extends android.support.v7.widget.AppCompa
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     private void init() {
         Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Montserrat-Regular.ttf");
-        setTextSize(getContext().getResources().getDimension(R.dimen.small_size));
         setTypeface(tf ,1);
-        setBackground(getContext().getResources().getDrawable(R.drawable.button_bg));
 
     }
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
@@ -202,11 +201,12 @@
             <Button
                 android:id="@+id/btn_okay"
                 android:layout_marginTop="@dimen/margin_button_top_pin"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
+                android:paddingLeft="260dp"
+                android:paddingRight="260dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/number_buttons"
-                android:layout_marginLeft="@dimen/button_left"
-                android:layout_marginRight="@dimen/button_right"
+              android:layout_centerHorizontal="true"
                 android:background="@drawable/back_buttongrey"
                 android:text="@string/txtOk"
                 android:layout_marginBottom="50dp"

@@ -17,4 +17,50 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="title_activity_main_dash_board">MainDashBoardActivity</string>
     <string name="dashboard_text">Dashboard</string>
+    <string name="save">Save</string>
+    <string name="charge_btn">Charge  8.00</string>
+
+
+    <!--fragment charge -->
+    <string name="fragment_charge_txtsubtotal">Sub Total : </string>
+    <string name="fragment_charge_txttax">Tax : </string>
+    <string name="fragment_charge_txttotal">Total : </string>
+    <string name="fragment_charge_txtOrderNo">Order No </string>
+    <string name="fragment_charge_txtApplyCoupon">Apply coupon</string>
+    <string name="fragment_charge_txtApplypoint">Apply point</string>
+    <string name="fragment_charge_txtApply">Apply</string>
+    <string name="fragment_charge_txtTotalAmt">Total Amount</string>
+    <string name="fragment_charge_RadioCAsh">Pay by Cash </string>
+    <string name="fragment_charge_RadioCard">Pay by Card </string>
+    <string name="fragment_charge_btnCancel">Cancel </string>
+    <string name="fragment_charge_txt_take_way">Take way </string>
+
+    <!--activity search-->
+    <string name="activity_search_edt_search">Enter Customer Mobile or Telephone Number </string>
+    <string name="activity_search_txt_search">Search!</string>
+
+
+    <!--fragment save-->
+    <string name="fragment_save_txt_delivery">Delivery Address</string>
+    <string name="fragment_save_txt_delete">Delete</string>
+    <string name="fragment_save_txt_add_address">Add Address</string>
+    <string name="fragment_save_txt_place_order">Place New Order</string>
+
+    <!--dialog delete item -->
+    <string name="dialog_del_clear_title">Clear Items </string>
+    <string name="dialog_del_clear_content">Are you sure you want to clear the items? </string>
+    <string name="dialog_del_cancel">Cancel </string>
+    <string name="dialog_del_clear">Clear </string>
+
+    <!--dialog add note item -->
+    <string name="dialog_add_note_title">Add Note </string>
+    <string name="dialog_add_note_add">Add </string>
+
+    <!--dialog add note item -->
+    <string name="dialog_add_dis_title">Add Discount </string>
+
+    <!--dialog delete address-->
+    <string name="dialog_add_address_content">Are you sure you want to delete the address? </string>
+    <string name="dialog_add_address_delete">Delete Address</string>
+
 </resources>

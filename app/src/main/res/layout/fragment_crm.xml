@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragments.NewOrderFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <RelativeLayout
+
+            android:id="@+id/nav_menu"
+            android:layout_width="@dimen/nav1_width"
+            android:layout_height="80dp"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nav_header_height"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/nav_header_desc"
+                    android:paddingTop="@dimen/nav_header_vertical_spacing"
+                    app:srcCompat="@drawable/profile_new" />
+
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/imageView"
+                    android:paddingTop="@dimen/nav_header_vertical_spacing"
+                    android:text="@string/nav_header_title"
+                    android:textColor="@color/color_lightgreytext" />
+
+                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/imageView"
+                    android:text="@string/nav_header_subtitle"
+                    android:textColor="@color/color_lightgreytext" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:id="@+id/fragment_crm_add_note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_backgroundpink"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="7dp"
+                        android:text="Add Note"
+                        android:textColor="#ffffff" />
+
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:id="@+id/fragment_crm_add_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@+id/img_notification"
+                        android:background="@drawable/btnbackground_green"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="7dp"
+                        android:text="Add Discount"
+                        android:textColor="#ffffff" />
+                    <ImageView
+                        android:id="@+id/img_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="10dp"
+                        android:contentDescription="@string/nav_header_desc"
+                        android:paddingTop="@dimen/nav_header_vertical_spacing"
+                        android:src="@drawable/ic_notification" />
+
+                    <ImageView
+                        android:id="@+id/img_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/img_notification"
+                        android:contentDescription="@string/nav_header_desc"
+                        android:paddingTop="@dimen/nav_header_vertical_spacing"
+                        android:src="@drawable/ic_logout" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <include
+                    android:id="@+id/top_catlist"
+                    layout="@layout/category_list_layout"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fragment_crm_recycler_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/item_offset"
+                    tools:listitem="@layout/row_itemlistmain"
+                    android:scrollbars="horizontal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:id="@+id/fragment_charge_top_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:background="@color/colorWhite"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp">
+                <ImageView
+                    android:id="@+id/include_charge_cust_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/nav_header_desc"
+                    android:paddingTop="@dimen/nav_header_vertical_spacing"
+                    android:paddingBottom="@dimen/nav_header_vertical_spacing"
+                    app:srcCompat="@drawable/profile_new" />
+
+                <LinearLayout
+                    android:layout_margin="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Marwin Simms"
+                        android:padding="3dp"
+                        android:textSize="@dimen/extra_small_size"
+                        android:textColor="@color/colorBlack"/>
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0454214552"
+                        android:textSize="@dimen/extra_small_size"
+                        android:padding="3dp"
+                        android:textColor="@color/colorlightBlack"/>
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Balance : 03:16"
+                        android:padding="3dp"
+                        android:textSize="@dimen/extra_small_size"
+                        android:textColor="@color/colorappPink"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom">
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/ic_take_way"
+                        android:textColor="@color/colorappPink"
+                        android:padding="2dp"
+                        android:textSize="@dimen/extra_small_size"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right|center_vertical"
+                        android:layout_marginLeft="3dp"
+                        android:text="@string/fragment_charge_txt_take_way"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fragment_charge_top_right">
+                <RelativeLayout
+                    android:id="@+id/deletetop"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/img_delete"
+                        android:src="@drawable/ic_delete_button" />
+
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:text="Items(2)" />
+
+                    <ImageView
+                        android:id="@+id/imgdot_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_dot" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/itemmainherader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/deletetop"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/ic_forward"
+                        android:visibility="invisible" />
+
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:text="Items name" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:text="Qty" />
+
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:text="Price" />
+
+                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:text="SubTotal" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/crm_dragged_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/itemmainherader"
+                    android:background="#fff"
+                    tools:listitem="@layout/row_itemlistmain" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/colorWhite"
+                    android:layout_alignParentBottom="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:padding="10dp"
+                            android:textSize="@dimen/extra_small_size"
+                            android:text="@string/fragment_charge_txtsubtotal"
+                            android:textColor="@color/colorDarkGrey" />
+                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:padding="10dp"
+                            android:textSize="@dimen/extra_small_size"
+                            android:text="200.00"
+                            android:textColor="@color/colorDarkGrey" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:textSize="@dimen/extra_small_size"
+                            android:text="@string/fragment_charge_txttax"
+                            android:textColor="@color/colorDarkGrey" />
+                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/extra_small_size"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="40.00"
+                            android:textColor="@color/colorDarkGrey" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:textSize="@dimen/small_size"
+                            android:textStyle="bold"
+                            android:text="@string/fragment_charge_txttotal"
+                            android:textColor="@color/colorBlack" />
+                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:textSize="@dimen/small_size"
+                            android:textStyle="bold"
+                            android:text="SAR 240.00"
+                            android:textColor="@color/colorBlack" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/bottom_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true">
+
+                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#BB0162"
+                            android:gravity="center"
+                            android:text="@string/save"
+                            android:id="@+id/fragment_crm_order_txtSave"
+                            android:textColor="#fff" />
+
+                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#A60054"
+                            android:gravity="center"
+                            android:id="@+id/fragment_crm_order_txtCharge"
+                            android:text="@string/charge_btn"
+                            android:textColor="#fff" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

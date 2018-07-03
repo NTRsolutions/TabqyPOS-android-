@@ -7,18 +7,23 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        <FrameLayout
+            android:id="@+id/main_frameDash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
         <RelativeLayout
             android:id="@+id/custom_nav1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
             android:background="@color/colorPrimary">
 
             <RelativeLayout
                 android:id="@+id/menu_icon"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -27,7 +32,6 @@
             </RelativeLayout>
 
             <android.support.design.widget.NavigationView
-                android:visibility="gone"
                 android:id="@+id/nav_view"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -37,13 +41,16 @@
                 android:background="@color/colorPrimary"
                 android:fitsSystemWindows="true"
                 android:theme="@style/NavigationDrawerStyle"
+                android:visibility="gone"
                 app:headerLayout="@layout/nav_header_dash_board"
                 app:itemIconTint="@drawable/drawer_item_color"
                 app:itemTextColor="@drawable/drawer_item_color"
                 app:menu="@menu/activity_dash_board_drawer" />
 
+
             <RelativeLayout
                 android:id="@+id/dashboard"
+                android:onClick="nav_click"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/menu_icon"
@@ -71,7 +78,8 @@
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/dashboard"
-                android:layout_marginTop="@dimen/margin_top_sidemenu">
+                android:layout_marginTop="@dimen/margin_top_sidemenu"
+                android:onClick="nav_click">
 
                 <ImageView
                     android:id="@+id/img_walkin"
@@ -90,6 +98,8 @@
             </RelativeLayout>
 
             <RelativeLayout
+
+                android:onClick="nav_click"
                 android:id="@+id/crm_layout"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
@@ -114,6 +124,8 @@
             </RelativeLayout>
 
             <RelativeLayout
+
+                android:onClick="nav_click"
                 android:id="@+id/table"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
@@ -138,6 +150,8 @@
             </RelativeLayout>
 
             <RelativeLayout
+
+                android:onClick="nav_click"
                 android:id="@+id/online_layout"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
@@ -162,6 +176,8 @@
             </RelativeLayout>
 
             <RelativeLayout
+
+                android:onClick="nav_click"
                 android:id="@+id/charity"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
@@ -186,6 +202,8 @@
             </RelativeLayout>
 
             <RelativeLayout
+
+                android:onClick="nav_click"
                 android:id="@+id/order_status"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
@@ -211,11 +229,6 @@
         </RelativeLayout>
 
 
-        <FrameLayout
-            android:id="@+id/main_frameDash"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_toRightOf="@+id/custom_nav1" />
 
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>
