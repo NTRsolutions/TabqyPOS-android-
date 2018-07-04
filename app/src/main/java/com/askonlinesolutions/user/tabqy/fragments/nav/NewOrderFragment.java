@@ -3,7 +3,9 @@ package com.askonlinesolutions.user.tabqy.fragments.nav;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Point;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -169,7 +171,6 @@ public class NewOrderFragment extends Fragment implements CallbackItemTouch, Mai
         nav_menu = (RelativeLayout) view.findViewById(R.id.nav_menu);
         ((MainDashBoardActivity) getActivity()).hideNav();
 
-
         recycler_viewmain = (RecyclerView) view.findViewById(R.id.recycler_viewmain);
         imgdot_menu = (ImageView) view.findViewById(R.id.imgdot_menu);
         dragged_items =  view.findViewById(R.id.dragged_items);
@@ -187,7 +188,7 @@ public class NewOrderFragment extends Fragment implements CallbackItemTouch, Mai
         txt_add_note = view.findViewById(R.id.add_note);
         txt_add_discount = view.findViewById(R.id.add_discount);
 
-        for (int i=0;i<15;i++){
+        for (int i=0;i<35;i++){
             TestData testData = new TestData();
             testData.setName("Coca Cola");
             testDataList.add(testData);
@@ -209,9 +210,6 @@ public class NewOrderFragment extends Fragment implements CallbackItemTouch, Mai
 
         adapterWalkinDraggedItems = new AdapterWalkinDraggedItems(arr_size);
         dragged_items.setAdapter(adapterWalkinDraggedItems);
-
-
-
 
         recycler_viewmain.setLayoutManager(new GridLayoutManager(getActivity(), SupportingWidgets.calculateNoOfColumns(getActivity())));
         ItemOffsetDecoration itemDecoration = new ItemOffsetDecoration(getActivity(), R.dimen.item_offset);
@@ -289,7 +287,7 @@ public class NewOrderFragment extends Fragment implements CallbackItemTouch, Mai
             }
         });
         dialog.setCancelable(false);
-        dialog.getWindow().setBackgroundDrawable(null);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
 
@@ -313,7 +311,7 @@ public class NewOrderFragment extends Fragment implements CallbackItemTouch, Mai
             }
         });
         dialog.setCancelable(false);
-        dialog.getWindow().setBackgroundDrawable(null);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
 
@@ -337,7 +335,7 @@ public class NewOrderFragment extends Fragment implements CallbackItemTouch, Mai
             }
         });
         dialog.setCancelable(false);
-        dialog.getWindow().setBackgroundDrawable(null);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
 

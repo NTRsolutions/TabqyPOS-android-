@@ -64,7 +64,6 @@ public class MainItemListAdapter2 extends RecyclerView.Adapter<MainItemListAdapt
 
 
 
-
     public interface Listener{
         void setEmptyList(boolean visibility);
     }
@@ -110,105 +109,6 @@ public class MainItemListAdapter2 extends RecyclerView.Adapter<MainItemListAdapt
     }
 
 
-
-
-   /* public class DragListener implements View.OnDragListener {
-        boolean isDropped = false;
-
-        Listener mListener;
-
-        public DragListener(Listener mListener) {
-            this.mListener = mListener;
-        }
-
-        @Override
-        public boolean onDrag(View v, DragEvent event) {
-            int action = event.getAction();
-            switch (action) {
-                case DragEvent.ACTION_DRAG_STARTED:
-                    break;
-
-                case DragEvent.ACTION_DRAG_ENTERED:
-                  //  v.setBackgroundColor(Color.LTGRAY);
-                    break;
-
-                case DragEvent.ACTION_DRAG_EXITED:
-                   // v.setBackgroundColor(Color.YELLOW);
-                    break;
-
-                case DragEvent.ACTION_DROP:
-
-                    Toast.makeText(mContext, "droped", Toast.LENGTH_SHORT).show();
-
-                   *//* isDropped = true;
-                    int positionSource = -1;
-                    int positionTarget = -1;
-
-                    View viewSource = (View) event.getLocalState();
-
-                    if (v.getId() == R.id.cardview_expandable_view || v.getId() == R.id.textEmptyList) {
-                        //RecyclerView target = (RecyclerView) v.getParent();
-                        RecyclerView target;
-                        if (v.getId() == R.id.textEmptyList) {
-                            target = (RecyclerView)
-                                    v.getRootView().findViewById(R.id.dragged_items);
-                        } else {
-                            target = (RecyclerView) v.getParent();
-                            positionTarget = (int) v.getTag();
-                        }
-
-                        RecyclerView source = (RecyclerView) viewSource.getParent();
-
-                        MainItemListAdapter1 adapterSource = (MainItemListAdapter1) source.getAdapter();
-                        positionSource = (int) viewSource.getTag();
-
-                        TestData customList = (TestData) adapterSource.getCustomList().get(positionSource);
-                        List<TestData> customListSource = adapterSource.getCustomList();
-
-                        customListSource.remove(positionSource);
-                        adapterSource.updateCustomList(customListSource);
-                        adapterSource.notifyDataSetChanged();
-
-                        MainItemListAdapter1 adapterTarget = (MainItemListAdapter1) target.getAdapter();
-                        List<TestData> customListTarget = adapterTarget.getCustomList();
-                        if (positionTarget >= 0) {
-                            customListTarget.add(positionTarget, customList);
-                        } else {
-                            customListTarget.add(customList);
-                        }
-                        adapterTarget.updateCustomList(customListTarget);
-                        adapterTarget.notifyDataSetChanged();
-                        v.setVisibility(View.VISIBLE);
-
-                        if (source.getId() == R.id.dragged_items
-                                && adapterSource.getItemCount() < 1) {
-                            mListener.setEmptyList(true);
-                        }
-
-                        if (v.getId() == R.id.textEmptyList) {
-                            mListener.setEmptyList(false);
-                        }
-                    }*//*
-                    break;
-
-                case DragEvent.ACTION_DRAG_ENDED:
-                    //v.setBackgroundColor(0);
-                    break;
-
-                default:
-                    break;
-            }
-
-            if (!isDropped) {
-                View vw = (View) event.getLocalState();
-                vw.setVisibility(View.VISIBLE);
-            }
-
-            return true;
-        }
-
-    }
-*/
     public interface Interface_MainItemListAdapter2 {
         public void method(int position);
     }

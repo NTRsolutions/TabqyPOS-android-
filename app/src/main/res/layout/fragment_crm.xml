@@ -15,7 +15,7 @@
         <RelativeLayout
             android:id="@+id/nav_menu"
             android:layout_width="@dimen/nav1_width"
-            android:layout_height="80dp"
+            android:layout_height="@dimen/size_60"
             android:background="@color/colorPrimary">
 
             <ImageView
@@ -38,72 +38,82 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/nav_header_height"
+                    android:layout_height="@dimen/size_60"
                     android:background="@color/colorWhite"
                     android:orientation="vertical"
-                    android:paddingBottom="@dimen/activity_horizontal_margin"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:padding="5dp"
                     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
                     <ImageView
                         android:id="@+id/imageView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:contentDescription="@string/nav_header_desc"
-                        android:paddingTop="@dimen/nav_header_vertical_spacing"
-                        app:srcCompat="@drawable/profile_new" />
-                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
-                        android:id="@+id/txt_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@+id/imageView"
-                        android:paddingTop="@dimen/nav_header_vertical_spacing"
-                        android:text="@string/nav_header_title"
-                        android:textColor="@color/color_lightgreytext" />
-                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
-                        android:id="@+id/txt_date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/txt_name"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@+id/imageView"
-                        android:text="@string/nav_header_subtitle"
-                        android:textColor="@color/color_lightgreytext" />
+                        app:srcCompat="@drawable/profile_new"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"/>
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/imageView">
+
+                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            android:id="@+id/txt_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vaibhav Khandelwal"
+                            android:textSize="@dimen/size_12"
+                            android:textColor="@color/colorBlack" />
+                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            android:id="@+id/txt_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_name"
+                            android:layout_marginTop="5dp"
+                            android:text="2QK8346H8"
+                            android:textSize="@dimen/size_10"
+                            android:textColor="@color/color_lightgreytext" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
+                        android:gravity="center"
                         android:orientation="horizontal">
                         <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                             android:id="@+id/fragment_crm_add_note"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="30dp"
                             android:background="@drawable/btn_backgroundpink"
-                            android:paddingBottom="7dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
                             android:paddingLeft="15dp"
                             android:paddingRight="15dp"
-                            android:paddingTop="7dp"
-                            android:textSize="@dimen/extra_small_size"
+                            android:gravity="center"
+                            android:textSize="@dimen/size_10"
                             android:text="Add Note"
                             android:textColor="#ffffff" />
 
                         <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                             android:id="@+id/fragment_crm_add_discount"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="30dp"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="10dp"
                             android:layout_toLeftOf="@+id/img_notification"
                             android:background="@drawable/btnbackground_green"
-                            android:paddingBottom="7dp"
                             android:paddingLeft="15dp"
                             android:paddingRight="15dp"
-                            android:paddingTop="7dp"
-                            android:textSize="@dimen/extra_small_size"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:textSize="@dimen/size_10"
                             android:text="Add Discount"
                             android:textColor="#ffffff" />
                         <ImageView
@@ -128,7 +138,9 @@
                             android:src="@drawable/ic_logout" />
 
                     </LinearLayout>
+
                 </RelativeLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"

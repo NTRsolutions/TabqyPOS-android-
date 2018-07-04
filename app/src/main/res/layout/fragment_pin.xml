@@ -26,7 +26,7 @@
             <LinearLayout
                 android:id="@+id/number_buttons"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/logo"
                 android:orientation="vertical">
 
@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Enter the PIN of manager or administrator "
+                    android:text="@string/fragment_pin_enter_the_pin_of_manager_or_administrator"
                     android:textSize="@dimen/extra_small_size" />
 
 
@@ -66,7 +66,7 @@
                                 android:layout_weight="1"
                                 android:background="@color/colorWhite"
                                 android:gravity="center"
-                                android:text="1" />
+                                android:text="@string/fragment_pin_1" />
 
                             <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                                 android:layout_width="0dp"
@@ -76,7 +76,7 @@
                                 android:layout_weight="1"
                                 android:background="@color/colorWhite"
                                 android:gravity="center"
-                                android:text="2" />
+                                android:text="@string/fragment_pin_2" />
 
                             <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                                 android:layout_width="0dp"
@@ -84,7 +84,7 @@
                                 android:layout_weight="1"
                                 android:background="@color/colorWhite"
                                 android:gravity="center"
-                                android:text="3" />
+                                android:text="@string/fragment_pin_3" />
 
                         </LinearLayout>
 
@@ -101,7 +101,7 @@
                                 android:layout_weight="1"
                                 android:background="@color/colorWhite"
                                 android:gravity="center"
-                                android:text="4" />
+                                android:text="@string/fragment_pin_4" />
 
                             <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                                 android:layout_width="0dp"
@@ -111,7 +111,7 @@
                                 android:layout_weight="1"
                                 android:background="@color/colorWhite"
                                 android:gravity="center"
-                                android:text="5" />
+                                android:text="@string/fragment_pin_5" />
 
                             <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                                 android:layout_width="0dp"
@@ -119,7 +119,7 @@
                                 android:layout_weight="1"
                                 android:background="@color/colorWhite"
                                 android:gravity="center"
-                                android:text="6" />
+                                android:text="@string/fragment_pin_6" />
 
                         </LinearLayout>
 
@@ -136,7 +136,7 @@
                                 android:layout_weight="1"
                                 android:background="@color/colorWhite"
                                 android:gravity="center"
-                                android:text="7" />
+                                android:text="@string/fragment_pin_7" />
 
                             <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                                 android:layout_width="0dp"
@@ -146,7 +146,7 @@
                                 android:layout_weight="1"
                                 android:background="@color/colorWhite"
                                 android:gravity="center"
-                                android:text="8" />
+                                android:text="@string/fragment_pin_8" />
 
                             <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                                 android:layout_width="0dp"
@@ -154,7 +154,7 @@
                                 android:layout_weight="1"
                                 android:background="@color/colorWhite"
                                 android:gravity="center"
-                                android:text="9" />
+                                android:text="@string/fragment_pin_9" />
 
                         </LinearLayout>
 
@@ -181,7 +181,7 @@
                                 android:layout_weight="1"
                                 android:background="@color/colorWhite"
                                 android:gravity="center"
-                                android:text="0" />
+                                android:text="@string/fragment_pin_0" />
 
                             <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                                 android:layout_width="0dp"
@@ -189,7 +189,7 @@
                                 android:layout_weight="1"
                                 android:background="@color/colorWhite"
                                 android:gravity="center"
-                                android:text="Clear" />
+                                android:text="@string/fragment_pin_clear" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -206,7 +206,7 @@
                 android:paddingRight="260dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/number_buttons"
-              android:layout_centerHorizontal="true"
+                android:layout_centerHorizontal="true"
                 android:background="@drawable/back_buttongrey"
                 android:text="@string/txtOk"
                 android:layout_marginBottom="50dp"

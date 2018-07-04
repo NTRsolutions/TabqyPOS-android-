@@ -15,7 +15,7 @@
         <RelativeLayout
             android:id="@+id/nav_menu"
             android:layout_width="@dimen/nav1_width"
-            android:layout_height="@dimen/size_50"
+            android:layout_height="@dimen/size_60"
             android:background="@color/colorPrimary">
 
             <ImageView
@@ -38,7 +38,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/size_50"
+                    android:layout_height="@dimen/size_60"
                     android:background="@color/colorWhite"
                     android:orientation="vertical"
                     android:padding="5dp"
@@ -46,8 +46,8 @@
 
                     <ImageView
                         android:id="@+id/imageView"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:contentDescription="@string/nav_header_desc"
                         app:srcCompat="@drawable/profile_new"
                         android:layout_alignParentLeft="true"
@@ -65,7 +65,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Vaibhav Khandelwal"
-                            android:textSize="@dimen/size_10"
+                            android:textSize="@dimen/size_12"
                             android:textColor="@color/colorBlack" />
                         <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                             android:id="@+id/txt_date"
@@ -74,7 +74,7 @@
                             android:layout_below="@+id/txt_name"
                             android:layout_marginTop="5dp"
                             android:text="2QK8346H8"
-                            android:textSize="@dimen/size_9"
+                            android:textSize="@dimen/size_10"
                             android:textColor="@color/color_lightgreytext" />
 
                     </LinearLayout>
@@ -84,35 +84,36 @@
                         android:layout_height="match_parent"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
+                        android:gravity="center"
                         android:orientation="horizontal">
                         <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                             android:id="@+id/fragment_crm_add_note"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_height="30dp"
                             android:background="@drawable/btn_backgroundpink"
                             android:layout_marginBottom="5dp"
                             android:layout_marginTop="5dp"
-                            android:paddingLeft="25dp"
-                            android:paddingRight="25dp"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
                             android:gravity="center"
-                            android:textSize="@dimen/size_8"
+                            android:textSize="@dimen/size_10"
                             android:text="Add Note"
                             android:textColor="#ffffff" />
 
                         <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                             android:id="@+id/fragment_crm_add_discount"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_height="30dp"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="10dp"
                             android:layout_toLeftOf="@+id/img_notification"
                             android:background="@drawable/btnbackground_green"
-                            android:paddingLeft="25dp"
-                            android:paddingRight="25dp"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
                             android:gravity="center"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
-                            android:textSize="@dimen/size_8"
+                            android:textSize="@dimen/size_10"
                             android:text="Add Discount"
                             android:textColor="#ffffff" />
                         <ImageView
@@ -153,7 +154,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:text="Table Order"
-                            android:textSize="@dimen/size_9"
+                            android:textSize="@dimen/size_12"
                             android:textColor="@color/colorBlack"
                             android:background="@color/colorLightGrey"
                             android:gravity="center_vertical"

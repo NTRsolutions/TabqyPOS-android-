@@ -74,7 +74,7 @@ public class CRMFragment extends Fragment implements CallbackItemTouch, MainItem
         txt_save = view.findViewById(R.id.fragment_crm_order_txtSave);
         dragged_items = view.findViewById(R.id.crm_dragged_items);
 
-        for (int i=0;i<15;i++){
+        for (int i=0;i<35;i++){
             TestData testData = new TestData();
             testData.setName("Coca Cola");
             testDataList.add(testData);
@@ -214,17 +214,12 @@ public class CRMFragment extends Fragment implements CallbackItemTouch, MainItem
                 if(v.getId() == R.id.fragment_crm_recycler_product){
 //                    Toast.makeText(getContext(), "Main", Toast.LENGTH_SHORT).show();
                 } else if(v.getId() == R.id.crm_dragged_items){
-//                    Toast.makeText(getContext(), "Re", Toast.LENGTH_SHORT).show();
-//                    testDataList.remove(dragged_item_position);
                     arr_size = arr_size + 1;
-//                    Toast.makeText(getContext(), arr_size + "Re", Toast.LENGTH_SHORT).show();
-
 
 /*
                     tv_sub_total.setText("$" + (arr_size * 12) + ".00");
                     tv_total.setText("SAR " + ((arr_size * 12) + 40) + ".00");
 */
-
                     adapterWalkinDraggedItems = new AdapterWalkinDraggedItems(arr_size);
                     dragged_items.setAdapter(adapterWalkinDraggedItems);
 

@@ -12,7 +12,7 @@
 
     <RelativeLayout
         android:layout_width="@dimen/nav1_width"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:background="@color/colorPrimary">
 
         <ImageView
@@ -35,7 +35,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/size_50"
+                android:layout_height="@dimen/size_60"
                 android:orientation="horizontal"
                 android:weightSum="10"
                 android:background="@color/colorWhite">

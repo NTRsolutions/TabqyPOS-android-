@@ -10,7 +10,7 @@
     <RelativeLayout
         android:id="@+id/nav_menu"
         android:layout_width="@dimen/nav1_width"
-        android:layout_height="80dp"
+        android:layout_height="@dimen/size_60"
         android:background="@color/colorPrimary">
 
         <ImageView
@@ -32,10 +32,7 @@
             android:background="@color/colorWhite"
             android:gravity="bottom"
             android:orientation="vertical"
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin"
+            android:padding="5dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
             <ImageView
@@ -43,9 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/nav_header_desc"
-                android:paddingTop="@dimen/nav_header_vertical_spacing"
                 app:srcCompat="@drawable/profile_new" />
-
             <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
                 android:id="@+id/txt_name"
                 android:layout_width="match_parent"
