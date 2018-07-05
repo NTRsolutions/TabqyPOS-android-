@@ -94,7 +94,6 @@ public class MainItemListAdapter2 extends RecyclerView.Adapter<MainItemListAdapt
         holder.constraintLayout.setOnDragListener(new DragListener(mListener));*/
     }
 
-
     public List<TestData> getCustomList() {
         return testDataList;
     }
@@ -107,7 +106,6 @@ public class MainItemListAdapter2 extends RecyclerView.Adapter<MainItemListAdapt
     public int getItemCount() {
         return testDataList.size();
     }
-
 
     public interface Interface_MainItemListAdapter2 {
         public void method(int position);

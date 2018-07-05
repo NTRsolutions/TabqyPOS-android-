@@ -1,4 +1,4 @@
-package com.askonlinesolutions.user.tabqy.fragments;
+package com.askonlinesolutions.user.tabqy.fragments.nav;
 
 
 import android.os.Bundle;
@@ -13,7 +13,6 @@ import android.widget.RelativeLayout;
 import com.askonlinesolutions.user.tabqy.R;
 import com.askonlinesolutions.user.tabqy.activities.MainDashBoardActivity;
 import com.askonlinesolutions.user.tabqy.customtext.CustomTextView;
-import com.askonlinesolutions.user.tabqy.fragments.nav.NewOrderFragment;
 import com.askonlinesolutions.user.tabqy.utils.SupportingWidgets;
 
 public class DashBoardFragment extends Fragment {

@@ -12,7 +12,7 @@ import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
 import com.askonlinesolutions.user.tabqy.R;
-import com.askonlinesolutions.user.tabqy.fragments.DashBoardFragment;
+import com.askonlinesolutions.user.tabqy.fragments.nav.DashBoardFragment;
 import com.askonlinesolutions.user.tabqy.fragments.nav.CRMFragment;
 import com.askonlinesolutions.user.tabqy.fragments.nav.CharityFragment;
 import com.askonlinesolutions.user.tabqy.fragments.nav.NewOrderFragment;
