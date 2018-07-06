@@ -33,7 +33,7 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="7"
+                android:layout_weight="5"
                 android:orientation="vertical" >
 
                 <RelativeLayout
@@ -58,20 +58,21 @@
                         android:orientation="vertical"
                         android:gravity="center_vertical"
                         android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@+id/imageView">
+                        android:layout_toRightOf="@+id/imageView"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/imageView">
 
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:id="@+id/txt_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Vaibhav Khandelwal"
-                            android:textSize="@dimen/size_12"
+                            android:textSize="@dimen/extra_small_size"
                             android:textColor="@color/colorBlack" />
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:id="@+id/txt_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/txt_name"
                             android:layout_marginTop="5dp"
                             android:text="2QK8346H8"
                             android:textSize="@dimen/size_10"
@@ -85,37 +86,37 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:gravity="center"
-                        android:orientation="horizontal">
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        android:orientation="horizontal"
+                        android:layout_alignParentEnd="true">
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:id="@+id/fragment_crm_add_note"
                             android:layout_width="wrap_content"
-                            android:layout_height="30dp"
+                            android:layout_height="40dp"
                             android:background="@drawable/btn_backgroundpink"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="@dimen/include_add_note_padding"
+                            android:layout_marginTop="@dimen/include_add_note_padding"
+                            android:textSize="@dimen/small_size"
                             android:paddingLeft="15dp"
                             android:paddingRight="15dp"
                             android:gravity="center"
-                            android:textSize="@dimen/size_10"
-                            android:text="Add Note"
+                            android:text="@string/status_bar_add_note"
                             android:textColor="#ffffff" />
 
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:id="@+id/fragment_crm_add_discount"
                             android:layout_width="wrap_content"
-                            android:layout_height="30dp"
-                            android:layout_centerVertical="true"
+                            android:layout_height="40dp"
                             android:layout_marginLeft="10dp"
-                            android:layout_toLeftOf="@+id/img_notification"
                             android:background="@drawable/btnbackground_green"
                             android:paddingLeft="15dp"
                             android:paddingRight="15dp"
                             android:gravity="center"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:textSize="@dimen/size_10"
-                            android:text="Add Discount"
-                            android:textColor="#ffffff" />
+                            android:layout_marginBottom="@dimen/include_add_note_padding"
+                            android:layout_marginTop="@dimen/include_add_note_padding"
+                            android:textSize="@dimen/small_size"
+                            android:text="@string/status_bar_add_discount"
+                            android:textColor="#ffffff"
+                            android:layout_marginStart="10dp" />
                         <ImageView
                             android:id="@+id/img_notification"
                             android:layout_width="wrap_content"
@@ -192,21 +193,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Marwin Simms"
                             android:padding="3dp"
                             android:textSize="@dimen/size_9"
                             android:textColor="@color/colorBlack"/>
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0454214552"
                             android:textSize="@dimen/size_9"
                             android:padding="3dp"
                             android:textColor="@color/colorlightBlack"/>
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Balance : 03:16"
@@ -220,7 +221,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="right|bottom">
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:drawableTop="@drawable/ic_take_way"
@@ -255,13 +256,13 @@
                             android:id="@+id/img_delete"
                             android:src="@drawable/ic_delete_button" />
 
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
                             android:layout_centerVertical="true"
                             android:text="Items(2)"
-                            android:textSize="@dimen/size_9"/>
+                            android:textSize="@dimen/extra_small_size"/>
 
                         <ImageView
                             android:id="@+id/imgdot_menu"
@@ -283,47 +284,37 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
                             android:layout_weight="0.5"
                             android:src="@drawable/ic_forward"
                             android:visibility="invisible" />
 
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_centerVertical="true"
                             android:layout_weight="1"
                             android:text="Items name"
-                            android:textSize="@dimen/size_8"/>
+                            android:textSize="@dimen/extra_small_size"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_centerVertical="true"
                             android:layout_weight="1"
                             android:text="Qty"
-                            android:textSize="@dimen/size_8"/>
+                            android:textSize="@dimen/extra_small_size"/>
 
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_centerVertical="true"
                             android:layout_weight="1"
                             android:text="Price"
-                            android:textSize="@dimen/size_8"/>
+                            android:textSize="@dimen/extra_small_size"/>
 
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_centerVertical="true"
                             android:layout_weight="1"
                             android:text="SubTotal"
-                            android:textSize="@dimen/size_8" />
+                            android:textSize="@dimen/extra_small_size" />
 
                     </LinearLayout>
 
@@ -345,7 +336,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            <com.pos.user.tabqy.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
@@ -355,7 +346,7 @@
                                 android:textSize="@dimen/extra_small_size"
                                 android:text="@string/fragment_charge_txtsubtotal"
                                 android:textColor="@color/colorDarkGrey" />
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            <com.pos.user.tabqy.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
@@ -373,7 +364,7 @@
                             android:orientation="horizontal"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp">
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            <com.pos.user.tabqy.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
@@ -382,7 +373,7 @@
                                 android:textSize="@dimen/extra_small_size"
                                 android:text="@string/fragment_charge_txttax"
                                 android:textColor="@color/colorDarkGrey" />
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            <com.pos.user.tabqy.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:textSize="@dimen/extra_small_size"
@@ -398,7 +389,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:padding="5dp">
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView
+                            <com.pos.user.tabqy.customtext.CustomTextButtonTextView
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
@@ -408,7 +399,7 @@
                                 android:textStyle="bold"
                                 android:text="@string/fragment_charge_txttotal"
                                 android:textColor="@color/colorBlack" />
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView
+                            <com.pos.user.tabqy.customtext.CustomTextButtonTextView
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
@@ -425,7 +416,7 @@
                             android:layout_height="50dp"
                             android:layout_alignParentBottom="true">
 
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            <com.pos.user.tabqy.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
@@ -436,7 +427,7 @@
                                 android:id="@+id/fragment_crm_order_txtSave"
                                 android:textColor="#fff" />
 
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            <com.pos.user.tabqy.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"

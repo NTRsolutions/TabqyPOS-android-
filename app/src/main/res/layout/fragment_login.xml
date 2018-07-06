@@ -22,7 +22,7 @@
                 android:layout_marginTop="40dp"
                 android:src="@drawable/logo" />
 
-            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+            <com.pos.user.tabqy.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -40,7 +40,7 @@
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomEditText
+                <com.pos.user.tabqy.customtext.CustomEditText
                     android:id="@+id/activity_login_edtEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
                     android:padding="10dp"
                     android:singleLine="true" />
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomEditText
+                <com.pos.user.tabqy.customtext.CustomEditText
                     android:id="@+id/activity_login_edtPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                     android:padding="10dp"
                     android:singleLine="true" />
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView
+                <com.pos.user.tabqy.customtext.CustomTextButtonTextView
                     android:id="@+id/login_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

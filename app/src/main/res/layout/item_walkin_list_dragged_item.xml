@@ -14,7 +14,7 @@
         android:src="@drawable/ic_forward"
         android:visibility="visible" />
 
-    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+    <com.pos.user.tabqy.customtext.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -30,7 +30,7 @@
         android:text="3"
         android:textSize="@dimen/size_8"/>
 
-    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+    <com.pos.user.tabqy.customtext.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -38,7 +38,7 @@
         android:text="$40"
         android:textSize="@dimen/size_8"/>
 
-    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+    <com.pos.user.tabqy.customtext.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"

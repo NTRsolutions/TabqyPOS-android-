@@ -51,7 +51,7 @@
                     android:paddingTop="@dimen/nav_header_vertical_spacing"
                     app:srcCompat="@drawable/profile_new" />
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:id="@+id/txt_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
                     android:text="@string/nav_header_title"
                     android:textColor="@color/color_lightgreytext" />
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:id="@+id/txt_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:orientation="horizontal">
-                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    <com.pos.user.tabqy.customtext.CustomTextView
                         android:id="@+id/add_note"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
                         android:text="Add Note"
                         android:textColor="#ffffff" />
 
-                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    <com.pos.user.tabqy.customtext.CustomTextView
                         android:id="@+id/add_discount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -146,14 +146,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView
+                            <com.pos.user.tabqy.customtext.CustomTextButtonTextView
                                 android:layout_width ="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="10dp"
                                 android:textColor="@color/colorBlack"
                                 android:id="@+id/fragment_charge_txtOrderno"
                                 android:text="@string/fragment_charge_txtOrderNo"/>
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView
+                            <com.pos.user.tabqy.customtext.CustomTextButtonTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/colorBlack"
@@ -181,7 +181,7 @@
                             android:layout_gravity="right"
                             android:orientation="horizontal"
                             android:layout_margin="5dp">
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            <com.pos.user.tabqy.customtext.CustomTextView
                                 android:layout_width="wrap_content"
                                 android:gravity="center"
                                 android:textColor="@color/colorBlack"
@@ -189,7 +189,7 @@
                                 android:textSize="@dimen/extra_small_size"
                                 android:layout_height="wrap_content"
                                 android:text="@string/fragment_charge_txtApplyCoupon"/>
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomEditText
+                            <com.pos.user.tabqy.customtext.CustomEditText
                                 android:layout_width="90dp"
                                 android:layout_height="35dp"
                                 android:textColor="@color/colorBlack"
@@ -206,7 +206,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
-                                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                                <com.pos.user.tabqy.customtext.CustomTextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="SAR 500"
@@ -219,7 +219,7 @@
                                     android:layout_width="90dp"
                                     android:layout_height="1dp"
                                     android:background="@color/colorLightGrey"/>
-                                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                                <com.pos.user.tabqy.customtext.CustomTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="2000 points "
@@ -235,7 +235,7 @@
                                 android:layout_gravity="end"
                                 android:orientation="horizontal"
                                 android:layout_margin="5dp">
-                                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                                <com.pos.user.tabqy.customtext.CustomTextView
                                     android:layout_width="wrap_content"
                                     android:gravity="center"
                                     android:textColor="@color/colorBlack"
@@ -243,7 +243,7 @@
                                     android:textSize="@dimen/extra_small_size"
                                     android:layout_height="wrap_content"
                                     android:text="@string/fragment_charge_txtApplypoint"/>
-                                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                                <com.pos.user.tabqy.customtext.CustomTextView
                                     android:layout_width="90dp"
                                     android:layout_height="35dp"
                                     android:gravity="center"
@@ -268,7 +268,7 @@
                             android:layout_gravity="end"
                             android:orientation="horizontal">
 
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView
+                            <com.pos.user.tabqy.customtext.CustomTextButtonTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/colorBlack"
@@ -276,7 +276,7 @@
                                 android:gravity="center"
                                 android:padding="8dp"
                                 android:text="@string/fragment_charge_txtTotalAmt"/>
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView
+                            <com.pos.user.tabqy.customtext.CustomTextButtonTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="SAR 2400.00"
@@ -319,7 +319,7 @@
                                 android:id="@+id/fragment_charge_RadioCard"
                                 android:text="@string/fragment_charge_RadioCard"/>
 
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            <com.pos.user.tabqy.customtext.CustomTextView
                                 android:layout_width="90dp"
                                 android:layout_height="35dp"
                                 android:text="@string/fragment_charge_btnCancel"
@@ -370,21 +370,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    <com.pos.user.tabqy.customtext.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Marwin Simms"
                         android:padding="3dp"
                         android:textSize="@dimen/extra_small_size"
                         android:textColor="@color/colorBlack"/>
-                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    <com.pos.user.tabqy.customtext.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0454214552"
                         android:textSize="@dimen/extra_small_size"
                         android:padding="3dp"
                         android:textColor="@color/colorlightBlack"/>
-                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    <com.pos.user.tabqy.customtext.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Balance : 03:16"
@@ -398,7 +398,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|bottom">
-                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    <com.pos.user.tabqy.customtext.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawableTop="@drawable/ic_take_way"
@@ -431,7 +431,7 @@
                        android:layout_marginLeft="10dp"
                        android:src="@drawable/ic_delete_button" />
 
-                   <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                   <com.pos.user.tabqy.customtext.CustomTextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:layout_centerInParent="true"
@@ -464,7 +464,7 @@
                        android:src="@drawable/ic_forward"
                        android:visibility="invisible" />
 
-                   <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                   <com.pos.user.tabqy.customtext.CustomTextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:layout_centerInParent="true"
@@ -480,7 +480,7 @@
                        android:layout_weight="1"
                        android:text="qty" />
 
-                   <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                   <com.pos.user.tabqy.customtext.CustomTextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:layout_centerInParent="true"
@@ -488,7 +488,7 @@
                        android:layout_weight="1"
                        android:text="price" />
 
-                   <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                   <com.pos.user.tabqy.customtext.CustomTextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:layout_centerInParent="true"
@@ -528,7 +528,7 @@
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:orientation="horizontal">
-                       <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                       <com.pos.user.tabqy.customtext.CustomTextView
                            android:layout_width="0dp"
                            android:layout_weight="1"
                            android:layout_height="wrap_content"
@@ -538,7 +538,7 @@
                            android:textSize="@dimen/extra_small_size"
                            android:text="@string/fragment_charge_txtsubtotal"
                            android:textColor="@color/colorDarkGrey" />
-                       <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                       <com.pos.user.tabqy.customtext.CustomTextView
                            android:layout_width="0dp"
                            android:layout_weight="1"
                            android:layout_height="wrap_content"
@@ -556,7 +556,7 @@
                        android:orientation="horizontal"
                        android:paddingLeft="10dp"
                        android:paddingRight="10dp">
-                       <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                       <com.pos.user.tabqy.customtext.CustomTextView
                            android:layout_width="0dp"
                            android:layout_weight="1"
                            android:layout_height="wrap_content"
@@ -565,7 +565,7 @@
                            android:textSize="@dimen/extra_small_size"
                            android:text="@string/fragment_charge_txttax"
                            android:textColor="@color/colorDarkGrey" />
-                       <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                       <com.pos.user.tabqy.customtext.CustomTextView
                            android:layout_width="0dp"
                            android:layout_weight="1"
                            android:textSize="@dimen/extra_small_size"
@@ -581,7 +581,7 @@
                        android:layout_height="wrap_content"
                        android:orientation="horizontal"
                        android:padding="5dp">
-                       <com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView
+                       <com.pos.user.tabqy.customtext.CustomTextButtonTextView
                            android:layout_width="0dp"
                            android:layout_weight="1"
                            android:layout_height="wrap_content"
@@ -591,7 +591,7 @@
                            android:textStyle="bold"
                            android:text="@string/fragment_charge_txttotal"
                            android:textColor="@color/colorBlack" />
-                       <com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView
+                       <com.pos.user.tabqy.customtext.CustomTextButtonTextView
                            android:layout_width="0dp"
                            android:layout_weight="1"
                            android:layout_height="wrap_content"

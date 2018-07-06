@@ -51,7 +51,7 @@
                                 android:orientation="vertical"
                                 android:layout_toRightOf="@+id/fragment_save_img_cusotm"
                                 android:layout_centerVertical="true">
-                                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                                <com.pos.user.tabqy.customtext.CustomTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="John"
@@ -59,7 +59,7 @@
                                     android:textColor="@color/colorBlack"
                                     android:paddingLeft="3dp"
                                     android:id="@+id/fragment_save_name"/>
-                                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                                <com.pos.user.tabqy.customtext.CustomTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:paddingLeft="3dp"
@@ -76,7 +76,7 @@
                                 android:orientation="vertical"
                                 android:paddingRight="5dp"
                                 android:layout_alignParentRight="true">
-                                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                                <com.pos.user.tabqy.customtext.CustomTextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Phone Number : "
@@ -84,7 +84,7 @@
                                     android:textSize="@dimen/extra_small_size"
                                     android:textColor="@color/colorlightBlack"
                                     android:paddingLeft="3dp" />
-                                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                                <com.pos.user.tabqy.customtext.CustomTextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:paddingLeft="3dp"
@@ -104,7 +104,7 @@
                             android:layout_height="1dp"
                             android:background="@color/colorLightGrey"/>
 
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="match_parent"
                             android:padding="5dp"
                             android:textColor="@color/colorBlack"
@@ -149,7 +149,7 @@
                                </android.support.v7.widget.CardView>
                            </LinearLayout>
 
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            <com.pos.user.tabqy.customtext.CustomTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/colorBlack"
@@ -163,7 +163,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp">
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            <com.pos.user.tabqy.customtext.CustomTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/colorappPink"
@@ -175,7 +175,7 @@
                                 android:drawableLeft="@drawable/ic_delete_button"
                                 android:drawableStart="@drawable/ic_delete_button" />
 
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            <com.pos.user.tabqy.customtext.CustomTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/colorWhite"
@@ -193,7 +193,7 @@
                         </RelativeLayout>
 
 
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
@@ -221,7 +221,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Customer Insight"
@@ -246,7 +246,7 @@
                                 android:layout_weight="1"                                android:layout_height="wrap_content"
                                 android:orientation="vertical"
                                 android:background="@drawable/bg_light_grey">
-                                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                                <com.pos.user.tabqy.customtext.CustomTextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/colorappPink"
@@ -261,7 +261,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="1dp"
                                     android:background="@color/colorGrey"/>
-                                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                                <com.pos.user.tabqy.customtext.CustomTextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:padding="3dp"
@@ -279,7 +279,7 @@
                                 android:layout_height="match_parent"
                                 android:orientation="vertical"
                                 android:background="@drawable/bg_light_grey">
-                                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                                <com.pos.user.tabqy.customtext.CustomTextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/colorappPink"
@@ -294,7 +294,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="1dp"
                                     android:background="@color/colorGrey"/>
-                                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                                <com.pos.user.tabqy.customtext.CustomTextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:padding="3dp"
@@ -312,7 +312,7 @@
                                 android:layout_height="match_parent"
                                 android:orientation="vertical"
                                 android:background="@drawable/bg_light_grey">
-                                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                                <com.pos.user.tabqy.customtext.CustomTextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/colorappPink"
@@ -327,7 +327,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="1dp"
                                     android:background="@color/colorGrey"/>
-                                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                                <com.pos.user.tabqy.customtext.CustomTextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:padding="3dp"
@@ -362,7 +362,7 @@
                                     android:singleLine="true"
                                     android:layout_weight="1"
                                     android:textSize="@dimen/extra_small_size"/>
-                                <com.askonlinesolutions.user.tabqy.customtext.CustomTextButtonTextView
+                                <com.pos.user.tabqy.customtext.CustomTextButtonTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Add"
@@ -398,7 +398,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-                    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                    <com.pos.user.tabqy.customtext.CustomTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -412,7 +412,7 @@
                         android:background="#F2F3F8"
                         android:orientation="horizontal">
 
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:textSize="10sp"
                             android:layout_height="wrap_content"
@@ -422,7 +422,7 @@
                             android:padding="5dp"
                             android:id="@+id/item_save_past_order_no"
                             android:textColor="@color/colorappPink"/>
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -433,7 +433,7 @@
                             android:id="@+id/item_save_past_order_date"
                             android:textColor="@color/colorappPink"/>
 
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -443,7 +443,7 @@
                             android:padding="5dp"
                             android:id="@+id/item_save_past_order_walkin"
                             android:textColor="@color/colorappPink"/>
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -453,7 +453,7 @@
                             android:textSize="10sp"
                             android:id="@+id/item_save_past_order_time_taken"
                             android:textColor="@color/colorappPink"/>
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -463,7 +463,7 @@
                             android:padding="5dp"
                             android:id="@+id/item_save_past_order_amt"
                             android:textColor="@color/colorappPink"/>
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -473,7 +473,7 @@
                             android:padding="5dp"
                             android:id="@+id/item_save_past_order_status"
                             android:textColor="@color/colorappPink"/>
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -483,7 +483,7 @@
                             android:padding="5dp"
                             android:id="@+id/item_save_past_order_driver"
                             android:textColor="@color/colorappPink"/>
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -493,7 +493,7 @@
                             android:padding="5dp"
                             android:id="@+id/item_save_past_order_agent"
                             android:textColor="@color/colorappPink"/>
-                        <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                        <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"

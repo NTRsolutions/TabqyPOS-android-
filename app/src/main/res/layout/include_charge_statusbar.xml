@@ -44,7 +44,7 @@
                 android:paddingTop="@dimen/nav_header_vertical_spacing"
                 app:srcCompat="@drawable/profile_new" />
 
-            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+            <com.pos.user.tabqy.customtext.CustomTextView
                 android:id="@+id/txt_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
                 android:text="@string/nav_header_title"
                 android:textColor="@color/color_lightgreytext" />
 
-            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+            <com.pos.user.tabqy.customtext.CustomTextView
                 android:id="@+id/txt_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:orientation="horizontal">
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:id="@+id/add_note"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
                     android:text="Add Note"
                     android:textColor="#ffffff" />
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:id="@+id/add_discount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -144,19 +144,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Marwin Simms"
                     android:padding="3dp"
                     android:textColor="@color/colorBlack"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0454214552"
                     android:padding="3dp"
                     android:textColor="@color/colorlightBlack"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Balance : 03:16"
@@ -166,7 +166,7 @@
             </LinearLayout>
 
 
-            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+            <com.pos.user.tabqy.customtext.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableTop="@drawable/ic_take_way"

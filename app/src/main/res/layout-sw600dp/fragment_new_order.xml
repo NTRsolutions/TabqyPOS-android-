@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.NewOrderFragment">
+
+    <include
+        android:id="@+id/top_statusbar"
+        layout="@layout/include_topsttausbar" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/mainitemlistlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_statusbar"
+        android:layout_marginLeft="@dimen/nav1_width"
+        android:layout_marginStart="@dimen/nav1_width">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview_expandable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorLightGrey">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/colorLightGrey">
+
+                        <ExpandableListView
+                            android:id="@+id/categories_list"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp" />
+
+                        <com.pos.user.tabqy.customtext.CustomTextView
+                            android:id="@+id/group_cat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/categories_list"
+                            android:text="Hot Drinks" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/group_cat"
+                            android:scrollbars="horizontal"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_viewmain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardview_expandable"
+                    android:padding="@dimen/item_offset"
+                    tools:listitem="@layout/row_itemlistmain"
+                    android:scrollbars="horizontal" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/group_cat"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/deletetop"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/fragment_new_order_delete"
+                        android:src="@drawable/ic_delete_button" />
+
+                    <com.pos.user.tabqy.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:text="Items(2)" />
+
+                    <ImageView
+                        android:id="@+id/imgdot_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_dot" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/itemmainherader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/deletetop"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/ic_forward"
+                        android:visibility="invisible" />
+
+                    <com.pos.user.tabqy.customtext.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/extra_small_size"
+                        android:layout_weight="1"
+                        android:text="Items name" />
+
+                    <com.pos.user.tabqy.customtext.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="@dimen/extra_small_size"
+                        android:layout_weight=".5"
+                        android:text="Qty" />
+
+                    <com.pos.user.tabqy.customtext.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="@dimen/extra_small_size"
+                        android:layout_weight="1"
+                        android:text="Price" />
+
+                    <com.pos.user.tabqy.customtext.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="@dimen/extra_small_size"
+                        android:layout_weight="1"
+                        android:text="SubTotal" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textEmptyList"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="List is Empty!"
+                    tools:visibility="gone" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/walkin_right_bottom"
+                    android:orientation="vertical"
+                    android:background="@color/colorWhite"
+                    android:layout_alignParentBottom="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.pos.user.tabqy.customtext.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:padding="10dp"
+                            android:text="@string/fragment_charge_txtsubtotal"
+                            android:textColor="@color/colorDarkGrey"
+                            android:textSize="@dimen/extra_small_size" />
+
+                        <com.pos.user.tabqy.customtext.CustomTextView
+                            android:id="@+id/walkin_sub_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:padding="10dp"
+                            android:text="12.00"
+                            android:textColor="@color/colorDarkGrey"
+                            android:textSize="@dimen/extra_small_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+                        <com.pos.user.tabqy.customtext.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:textSize="@dimen/extra_small_size"
+                            android:text="@string/fragment_charge_txttax"
+                            android:textColor="@color/colorDarkGrey" />
+                        <com.pos.user.tabqy.customtext.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/extra_small_size"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="40.00"
+                            android:textColor="@color/colorDarkGrey" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+                        <com.pos.user.tabqy.customtext.CustomTextButtonTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:textSize="@dimen/small_size"
+                            android:textStyle="bold"
+                            android:text="@string/fragment_charge_txttotal"
+                            android:textColor="@color/colorBlack" />
+                        <com.pos.user.tabqy.customtext.CustomTextButtonTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/walkin_total"
+                            android:gravity="right"
+                            android:textSize="@dimen/small_size"
+                            android:textStyle="bold"
+                            android:text="SAR 52.00"
+                            android:textColor="@color/colorBlack" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/bottom_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                        <com.pos.user.tabqy.customtext.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#BB0162"
+                            android:gravity="center"
+                            android:text="@string/save"
+                            android:textSize="@dimen/small_size"
+                            android:id="@+id/fragment_new_order_txtSave"
+                            android:textColor="#fff" />
+
+                        <com.pos.user.tabqy.customtext.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#A60054"
+                            android:gravity="center"
+                            android:textSize="@dimen/small_size"
+                            android:id="@+id/fragment_new_order_txtCharge"
+                            android:text="@string/charge_btn"
+                            android:textColor="#fff" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/dragged_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/itemmainherader"
+                    android:layout_above="@+id/walkin_right_bottom"
+                    android:background="#fff"
+                    android:scrollbars="none"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

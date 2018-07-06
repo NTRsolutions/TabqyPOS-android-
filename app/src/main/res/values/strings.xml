@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyNewProject</string>
+    <string name="app_name">TabqyPOS</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_authentication">AuthenticationActivity</string>
     <string name="txtPos">POS</string>
@@ -93,5 +93,13 @@
     <string name="fragment_pin_3">3</string>
     <string name="fragment_pin_2">2</string>
     <string name="fragment_pin_enter_the_pin_of_manager_or_administrator">Enter the PIN of manager or administrator</string>
+
+    <!-- status bar -->
+    <string name="status_bar_customer">Customer</string>
+    <string name="status_bar_scan">Scan</string>
+    <string name="status_bar_search">Search</string>
+    <string name="status_bar_add">Add</string>
+    <string name="status_bar_add_discount">Add Discount</string>
+    <string name="status_bar_add_note">Add Note</string>
 
 </resources>

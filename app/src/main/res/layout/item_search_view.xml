@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     >
 
-    <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+    <com.pos.user.tabqy.customtext.CustomTextView
         android:layout_width="match_parent"
         android:background="@drawable/edittext_bg"
         android:layout_height="wrap_content"

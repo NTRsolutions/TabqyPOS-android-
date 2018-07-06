@@ -65,14 +65,14 @@
                             android:layout_marginLeft="10dp"
                             android:layout_toRightOf="@+id/imageView">
 
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            <com.pos.user.tabqy.customtext.CustomTextView
                                 android:id="@+id/txt_name"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Vaibhav Khandelwal"
                                 android:textSize="@dimen/size_10"
                                 android:textColor="@color/colorBlack" />
-                            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                            <com.pos.user.tabqy.customtext.CustomTextView
                                 android:id="@+id/txt_date"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -129,7 +129,7 @@
             android:background="@color/colorWhite"
             android:padding="@dimen/size_10">
             
-            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+            <com.pos.user.tabqy.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Life Time Order: 2567"
@@ -144,7 +144,7 @@
                 android:layout_alignParentRight="true"
                 android:gravity="center_vertical">
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Filter by"
@@ -153,7 +153,7 @@
                     android:gravity="center"
                     android:layout_marginRight="@dimen/size_10"
                     android:layout_alignParentLeft="true"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="80dp"
                     android:layout_height="30dp"
                     android:text="@string/cash"
@@ -163,7 +163,7 @@
                     android:background="@drawable/shape_background_bg"
                     android:layout_marginRight="@dimen/size_3"
                     android:layout_alignParentLeft="true"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="80dp"
                     android:layout_height="30dp"
                     android:text="@string/credit_card"
@@ -173,7 +173,7 @@
                     android:background="@drawable/shape_background_bg"
                     android:layout_marginRight="@dimen/size_3"
                     android:layout_alignParentLeft="true"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="80dp"
                     android:layout_height="30dp"
                     android:text="@string/date"
@@ -183,7 +183,7 @@
                     android:background="@drawable/shape_background_bg"
                     android:layout_marginRight="@dimen/size_3"
                     android:layout_alignParentLeft="true"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="80dp"
                     android:layout_height="30dp"
                     android:text="@string/month"
@@ -193,7 +193,7 @@
                     android:background="@drawable/shape_background_bg"
                     android:layout_marginRight="@dimen/size_3"
                     android:layout_alignParentLeft="true"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="80dp"
                     android:layout_height="30dp"
                     android:text="@string/year"
@@ -222,7 +222,7 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp">
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/new_orders"
@@ -230,7 +230,7 @@
                     android:textSize="@dimen/size_10"
                     android:layout_gravity="center"
                     android:layout_marginRight="10dp"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2"
@@ -255,7 +255,7 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp">
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/waiting_for_pick"
@@ -263,7 +263,7 @@
                     android:textSize="@dimen/size_10"
                     android:layout_gravity="center"
                     android:layout_marginRight="10dp"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2"
@@ -288,7 +288,7 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp">
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/delivery_in_progress"
@@ -296,7 +296,7 @@
                     android:textSize="@dimen/size_10"
                     android:layout_gravity="center"
                     android:layout_marginRight="10dp"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2"
@@ -321,7 +321,7 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp">
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/delivery"
@@ -329,7 +329,7 @@
                     android:textSize="@dimen/size_10"
                     android:layout_gravity="center"
                     android:layout_marginRight="10dp"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2"
@@ -358,7 +358,7 @@
                 android:padding="@dimen/size_5"
                 android:orientation="horizontal">
 
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -366,7 +366,7 @@
                     android:textColor="@color/colorBlack"
                     android:textSize="@dimen/size_12"
                     android:gravity="center_vertical"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -374,7 +374,7 @@
                     android:textColor="@color/colorBlack"
                     android:textSize="@dimen/size_12"
                     android:gravity="center_vertical"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -382,7 +382,7 @@
                     android:textSize="@dimen/size_12"
                     android:textColor="@color/colorBlack"
                     android:gravity="center_vertical"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -390,7 +390,7 @@
                     android:textSize="@dimen/size_12"
                     android:textColor="@color/colorBlack"
                     android:gravity="center_vertical"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -398,7 +398,7 @@
                     android:textColor="@color/colorBlack"
                     android:text="@string/amount"
                     android:gravity="center_vertical"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+                <com.pos.user.tabqy.customtext.CustomTextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -406,7 +406,7 @@
                     android:textSize="@dimen/size_12"
                     android:textColor="@color/colorBlack"
                     android:gravity="center_vertical"/>
-                <com.askonlinesolutions.user.tabqy.customtext.CustomTextViewBold
+                <com.pos.user.tabqy.customtext.CustomTextViewBold
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"

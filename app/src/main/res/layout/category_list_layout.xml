@@ -21,7 +21,7 @@
                 android:layout_width="100dp"
                 android:layout_height="40dp" />
 
-            <com.askonlinesolutions.user.tabqy.customtext.CustomTextView
+            <com.pos.user.tabqy.customtext.CustomTextView
                 android:id="@+id/group_cat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

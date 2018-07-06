@@ -15,27 +15,14 @@
             android:id="@+id/custom_nav1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="@dimen/nav1_width"
             android:background="@color/colorPrimary">
 
-            <RelativeLayout
-                android:id="@+id/menu_icon"
-                android:layout_width="@dimen/nav1_width"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:visibility="gone">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_menu" />
-            </RelativeLayout>
 
             <android.support.design.widget.NavigationView
                 android:id="@+id/nav_view"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/menu_icon"
                 android:layout_gravity="start"
                 android:layout_marginTop="15dp"
                 android:background="@color/colorPrimary"
@@ -53,7 +40,7 @@
                 android:onClick="nav_click"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/menu_icon"
+                android:padding="@dimen/padding_sidemenu"
                 android:layout_marginTop="@dimen/margin_top_sidemenu">
 
                 <ImageView
@@ -78,7 +65,8 @@
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/dashboard"
-                android:layout_marginTop="@dimen/margin_top_sidemenu"
+                android:padding="@dimen/padding_sidemenu"
+                android:layout_marginTop="@dimen/margin_top_sidemenu_next"
                 android:onClick="nav_click">
 
                 <ImageView
@@ -98,13 +86,13 @@
             </RelativeLayout>
 
             <RelativeLayout
-
                 android:onClick="nav_click"
                 android:id="@+id/crm_layout"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
+                android:padding="@dimen/padding_sidemenu"
                 android:layout_below="@+id/walkin_layout"
-                android:layout_marginTop="@dimen/margin_top_sidemenu">
+                android:layout_marginTop="@dimen/margin_top_sidemenu_next">
 
                 <ImageView
                     android:id="@+id/crm"
@@ -124,13 +112,13 @@
             </RelativeLayout>
 
             <RelativeLayout
-
                 android:onClick="nav_click"
                 android:id="@+id/table"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
+                android:padding="@dimen/padding_sidemenu"
                 android:layout_below="@+id/crm_layout"
-                android:layout_marginTop="@dimen/margin_top_sidemenu">
+                android:layout_marginTop="@dimen/margin_top_sidemenu_next">
 
                 <ImageView
                     android:id="@+id/img_table"
@@ -150,13 +138,13 @@
             </RelativeLayout>
 
             <RelativeLayout
-
                 android:onClick="nav_click"
                 android:id="@+id/online_layout"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/table"
-                android:layout_marginTop="@dimen/margin_top_sidemenu">
+                android:padding="@dimen/padding_sidemenu"
+                android:layout_marginTop="@dimen/margin_top_sidemenu_next">
 
                 <ImageView
                     android:id="@+id/img_online"
@@ -176,13 +164,13 @@
             </RelativeLayout>
 
             <RelativeLayout
-
                 android:onClick="nav_click"
                 android:id="@+id/charity"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/online_layout"
-                android:layout_marginTop="@dimen/margin_top_sidemenu">
+                android:padding="@dimen/padding_sidemenu"
+                android:layout_marginTop="@dimen/margin_top_sidemenu_next">
 
                 <ImageView
                     android:id="@+id/img_charity"
@@ -208,7 +196,7 @@
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/charity"
-                android:layout_marginTop="@dimen/margin_top_sidemenu">
+                android:layout_marginTop="@dimen/margin_top_sidemenu_next">
 
                 <ImageView
                     android:id="@+id/img_order_status"

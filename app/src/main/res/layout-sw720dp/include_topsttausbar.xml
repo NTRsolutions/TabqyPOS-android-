@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="7">
+        <RelativeLayout
+            android:id="@+id/nav_menu"
+            android:layout_width="@dimen/nav1_width"
+            android:layout_height="@dimen/nav1_width"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav1_width"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/nav_header_desc"
+                app:srcCompat="@drawable/profile_new"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_alignParentStart="true" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imageView"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/imageView">
+
+                <com.pos.user.tabqy.customtext.CustomTextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vaibhav Khandelwal"
+                    android:textSize="@dimen/extra_small_size"
+                    android:textColor="@color/colorBlack" />
+                <com.pos.user.tabqy.customtext.CustomTextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="2QK8346H8"
+                    android:textSize="@dimen/size_10"
+                    android:textColor="@color/color_lightgreytext" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+                <com.pos.user.tabqy.customtext.CustomTextView
+                    android:id="@+id/add_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/btn_backgroundpink"
+                    android:layout_marginBottom="@dimen/include_add_note_padding"
+                    android:layout_marginTop="@dimen/include_add_note_padding"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/small_size"
+                    android:text="@string/status_bar_add_note"
+                    android:textColor="#ffffff" />
+
+                <com.pos.user.tabqy.customtext.CustomTextView
+                    android:id="@+id/add_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btnbackground_green"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/include_add_note_padding"
+                    android:layout_marginTop="@dimen/include_add_note_padding"
+                    android:textSize="@dimen/small_size"
+                    android:text="@string/status_bar_add_discount"
+                    android:textColor="#ffffff"
+                    android:layout_marginStart="10dp" />
+                <ImageView
+                    android:id="@+id/img_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:contentDescription="@string/nav_header_desc"
+                    android:paddingTop="@dimen/nav_header_vertical_spacing"
+                    android:src="@drawable/ic_notification"
+                    android:layout_marginStart="10dp" />
+
+                <ImageView
+                    android:id="@+id/img_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:contentDescription="@string/nav_header_desc"
+                    android:paddingTop="@dimen/nav_header_vertical_spacing"
+                    android:src="@drawable/ic_logout"
+                    android:layout_marginStart="15dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_marginStart="10dp">
+            <com.pos.user.tabqy.customtext.CustomTextView
+                android:id="@+id/text_customer"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="3dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:text="@string/status_bar_customer"
+                android:textSize="@dimen/extra_small_size"
+                android:textColor="@color/color_lightgreytext"
+                android:paddingStart="5dp"
+                android:paddingEnd="3dp" />
+            <View
+                android:layout_marginLeft="2dp"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorGrey"
+                android:layout_marginStart="2dp" />
+
+            <com.pos.user.tabqy.customtext.CustomTextView
+                android:id="@+id/img_scan"
+                android:layout_width="0dp"
+                android:layout_weight=".7"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/status_bar_scan"
+                android:textSize="@dimen/extra_small_size"
+                android:gravity="center"
+                android:contentDescription="@string/nav_header_desc"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:drawableTop="@drawable/ic_qr_code" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorGrey"/>
+
+            <com.pos.user.tabqy.customtext.CustomTextView
+                android:id="@+id/img_search"
+                android:layout_width="0dp"
+                android:layout_weight=".7"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/status_bar_search"
+                android:textSize="@dimen/extra_small_size"
+                android:gravity="center"
+                android:contentDescription="@string/nav_header_desc"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:drawableTop="@drawable/ic_magnifying_glass" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorGrey"/>
+
+            <com.pos.user.tabqy.customtext.CustomTextView
+                android:id="@+id/img_adduser"
+                android:layout_width="0dp"
+                android:layout_weight=".7"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/status_bar_add"
+                android:textSize="@dimen/extra_small_size"
+                android:gravity="center"
+                android:contentDescription="@string/nav_header_desc"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:drawableTop="@drawable/ic_add_user" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
