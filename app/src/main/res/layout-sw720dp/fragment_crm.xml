@@ -121,8 +121,6 @@
                             android:id="@+id/img_notification"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginLeft="10dp"
                             android:contentDescription="@string/nav_header_desc"
                             android:paddingTop="@dimen/nav_header_vertical_spacing"
                             android:src="@drawable/ic_notification" />
@@ -131,12 +129,11 @@
                             android:id="@+id/img_logout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
                             android:layout_marginLeft="15dp"
-                            android:layout_toRightOf="@+id/img_notification"
                             android:contentDescription="@string/nav_header_desc"
                             android:paddingTop="@dimen/nav_header_vertical_spacing"
-                            android:src="@drawable/ic_logout" />
+                            android:src="@drawable/ic_logout"
+                            android:layout_marginStart="15dp" />
 
                     </LinearLayout>
 
@@ -178,7 +175,8 @@
                     android:paddingLeft="10dp"
                     android:background="@color/colorWhite"
                     android:paddingRight="10dp"
-                    android:paddingTop="10dp">
+                    android:paddingTop="10dp"
+                    android:layout_alignParentEnd="true">
                     <ImageView
                         android:id="@+id/include_charge_cust_profile"
                         android:layout_width="wrap_content"
@@ -228,7 +226,7 @@
                             android:textColor="@color/colorappPink"
                             android:padding="2dp"
                             android:textSize="@dimen/size_9"
-                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
                             android:gravity="right|center_vertical"
                             android:layout_marginLeft="3dp"
                             android:text="@string/fragment_charge_txt_take_way"/>
@@ -254,7 +252,8 @@
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="10dp"
                             android:id="@+id/img_delete"
-                            android:src="@drawable/ic_delete_button" />
+                            android:src="@drawable/ic_delete_button"
+                            android:layout_marginStart="10dp" />
 
                         <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="wrap_content"
@@ -270,7 +269,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
-                            android:src="@drawable/ic_dot" />
+                            android:src="@drawable/ic_dot"
+                            android:layout_alignParentEnd="true" />
                     </RelativeLayout>
 
                     <LinearLayout
@@ -284,8 +284,6 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
                             android:layout_weight="0.5"
                             android:src="@drawable/ic_forward"
                             android:visibility="invisible" />
@@ -296,35 +294,29 @@
                             android:layout_centerInParent="true"
                             android:layout_centerVertical="true"
                             android:layout_weight="1"
-                            android:text="Items name"
-                            android:textSize="@dimen/size_8"/>
+                            android:text="@string/fragment_crm_items_name"
+                            android:textSize="@dimen/extra_small_size"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_centerVertical="true"
-                            android:layout_weight="1"
-                            android:text="Qty"
-                            android:textSize="@dimen/size_8"/>
+                            android:layout_weight=".5"
+                            android:text="@string/fragment_crm_qty"
+                            android:textSize="@dimen/extra_small_size"/>
 
                         <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_centerVertical="true"
                             android:layout_weight="1"
-                            android:text="Price"
-                            android:textSize="@dimen/size_8"/>
+                            android:text="@string/fragment_crm_price"
+                            android:textSize="@dimen/extra_small_size"/>
 
                         <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_centerVertical="true"
                             android:layout_weight="1"
-                            android:text="SubTotal"
-                            android:textSize="@dimen/size_8" />
+                            android:text="@string/fragment_crm_subtotal"
+                            android:textSize="@dimen/extra_small_size" />
 
                     </LinearLayout>
 
@@ -351,7 +343,7 @@
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:gravity="left"
+                                android:gravity="end"
                                 android:padding="10dp"
                                 android:textSize="@dimen/extra_small_size"
                                 android:text="@string/fragment_charge_txtsubtotal"

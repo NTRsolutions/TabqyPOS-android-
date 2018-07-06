@@ -102,4 +102,10 @@
     <string name="status_bar_add_discount">Add Discount</string>
     <string name="status_bar_add_note">Add Note</string>
 
+    <!--fragment crm -->
+    <string name="fragment_crm_items_name">Items name</string>
+    <string name="fragment_crm_qty">Qty</string>
+    <string name="fragment_crm_price">Price</string>
+    <string name="fragment_crm_subtotal">SubTotal</string>
+
 </resources>
