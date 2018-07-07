@@ -21,6 +21,7 @@ public class ChargeFragment extends Fragment implements View.OnClickListener, Ra
 
     private RelativeLayout nav_menu;
     private View view;
+    private RadioGroup radioGroup;
     private TextView txt_add_discount, txt_add_note;
 
     public ChargeFragment(){
@@ -40,6 +41,7 @@ public class ChargeFragment extends Fragment implements View.OnClickListener, Ra
     private void setListeners() {
         txt_add_note.setOnClickListener(this);
         txt_add_discount.setOnClickListener(this);
+        radioGroup.setOnCheckedChangeListener(this);
 
         nav_menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +52,7 @@ public class ChargeFragment extends Fragment implements View.OnClickListener, Ra
     }
 
     private void init(View view) {
+        radioGroup = view.findViewById(R.id.fragment_charge_radiogroup);
         nav_menu = (RelativeLayout) view.findViewById(R.id.nav_menu);
         txt_add_discount = view.findViewById(R.id.fragment_charge_add_discount);
         txt_add_note = view.findViewById(R.id.fragment_charge_add_note);
