@@ -108,5 +108,6 @@
     <string name="fragment_crm_price">Price</string>
     <string name="fragment_crm_subtotal">SubTotal</string>
     <string name="fragment_table_table_order">Table Order</string>
+    <string name="dialog_pay_by_cash">Pay By Cash</string>
 
 </resources>

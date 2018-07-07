@@ -125,9 +125,14 @@ public class ChargeFragment extends Fragment implements View.OnClickListener, Ra
             if(radioButton.getId() == R.id.fragment_charge_RadioCash){
                 Toast.makeText(getActivity(), "Cash", Toast.LENGTH_SHORT).show();
             } else{
-                Toast.makeText(getActivity(), "card", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Card", Toast.LENGTH_SHORT).show();
 
             }
         }
     }
+
+    private void payDialog(){
+
+    }
+
 }
