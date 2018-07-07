@@ -17,7 +17,7 @@
 
             android:id="@+id/nav_menu"
             android:layout_width="@dimen/nav1_width"
-            android:layout_height="80dp"
+            android:layout_height="@dimen/nav1_width"
             android:background="@color/colorPrimary">
 
             <ImageView
@@ -297,6 +297,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
+                            android:id="@+id/fragment_charge_radiogroup"
                             android:orientation="horizontal">
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -308,6 +309,7 @@
                                 android:id="@+id/fragment_charge_RadioCash"
                                 android:textColor="@color/colorBlack"
                                 android:text="@string/fragment_charge_RadioCAsh"/>
+
                             <RadioButton
                                 android:layout_weight="1"
                                 android:layout_width="wrap_content"

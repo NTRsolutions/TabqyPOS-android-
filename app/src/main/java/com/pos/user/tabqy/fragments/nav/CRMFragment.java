@@ -246,6 +246,7 @@ public class CRMFragment extends Fragment implements CallbackItemTouch, MainItem
         }
         return true;
     }
+
     private int dragged_item_position = 0;
 
     @Override

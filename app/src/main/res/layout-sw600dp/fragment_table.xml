@@ -33,7 +33,7 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="6.5"
+                android:layout_weight="5"
                 android:orientation="vertical" >
 
                 <RelativeLayout
@@ -170,6 +170,7 @@
                 </LinearLayout>
 
             </LinearLayout>
+
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -238,10 +239,11 @@
                             android:textColor="@color/colorappPink"
                             android:padding="2dp"
                             android:textSize="@dimen/size_12"
-                            android:layout_alignParentEnd="true"
-                            android:gravity="right|center_vertical"
+                            android:layout_alignParentRight="true"
+                            android:gravity="end|center_vertical"
                             android:layout_marginLeft="3dp"
                             android:text="@string/fragment_charge_txt_take_way"
+                            android:layout_alignParentEnd="true"
                             android:layout_marginStart="3dp" />
 
                     </RelativeLayout>
@@ -264,7 +266,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="10dp"
-                            android:id="@+id/img_delete"
+                            android:id="@+id/fragment_new_order_delete"
                             android:src="@drawable/ic_delete_button" />
 
                         <com.pos.user.tabqy.customtext.CustomTextView
@@ -272,8 +274,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
                             android:layout_centerVertical="true"
-                            android:text="Table 2(0)"
-                            android:textSize="@dimen/size_9"/>
+                            android:text="Items(2)" />
 
                         <ImageView
                             android:id="@+id/imgdot_menu"
@@ -296,34 +297,33 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
                             android:layout_weight="0.5"
                             android:src="@drawable/ic_forward"
                             android:visibility="invisible" />
 
                         <com.pos.user.tabqy.customtext.CustomTextView
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/fragment_crm_items_name"
-                            android:textSize="@dimen/extra_small_size"/>
+                            android:textSize="@dimen/extra_small_size" />
 
-                        <com.pos.user.tabqy.customtext.CustomTextView
-                            android:layout_width="0dp"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            android:layout_weight=".5"
                             android:text="@string/fragment_crm_qty"
                             android:textSize="@dimen/extra_small_size"/>
 
                         <com.pos.user.tabqy.customtext.CustomTextView
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/fragment_crm_price"
                             android:textSize="@dimen/extra_small_size"/>
 
                         <com.pos.user.tabqy.customtext.CustomTextView
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/fragment_crm_subtotal"
@@ -354,7 +354,7 @@
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:gravity="end"
+                                android:gravity="start"
                                 android:padding="10dp"
                                 android:textSize="@dimen/extra_small_size"
                                 android:text="@string/fragment_charge_txtsubtotal"
@@ -363,7 +363,7 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
-                                android:gravity="right"
+                                android:gravity="end"
                                 android:padding="10dp"
                                 android:textSize="@dimen/extra_small_size"
                                 android:text="200.00"
@@ -382,7 +382,7 @@
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:gravity="end"
+                                android:gravity="start"
                                 android:textSize="@dimen/extra_small_size"
                                 android:text="@string/fragment_charge_txttax"
                                 android:textColor="@color/colorDarkGrey" />
@@ -407,7 +407,7 @@
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:gravity="end"
+                                android:gravity="start"
                                 android:textSize="@dimen/small_size"
                                 android:textStyle="bold"
                                 android:text="@string/fragment_charge_txttotal"
@@ -426,8 +426,7 @@
                         <LinearLayout
                             android:id="@+id/bottom_buttons"
                             android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:layout_alignParentBottom="true">
+                            android:layout_height="60dp">
 
                             <com.pos.user.tabqy.customtext.CustomTextView
                                 android:layout_width="0dp"

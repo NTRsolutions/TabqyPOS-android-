@@ -1,5 +1,6 @@
 package com.pos.user.tabqy.adapter;
 
+import android.annotation.SuppressLint;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -55,11 +56,11 @@ public class AdapterTableMain extends RecyclerView.Adapter<AdapterTableMain.MyVi
         return new MyViewHolder(itemView);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
 
         holder.tv.setText((position + 1) + "");
-
         if (arr.get(position).equals("0")) {
             holder.iv.setImageResource(R.drawable.ic_table_main);
         } else {

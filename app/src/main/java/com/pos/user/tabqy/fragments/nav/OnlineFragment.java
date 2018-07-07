@@ -8,13 +8,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.pos.user.tabqy.R;
+import com.pos.user.tabqy.activities.MainDashBoardActivity;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class OnlineFragment extends Fragment implements View.OnClickListener {
+    private RelativeLayout nav_menu;
 
     public OnlineFragment() {
         // Required empty public constructor
@@ -39,11 +42,14 @@ public class OnlineFragment extends Fragment implements View.OnClickListener {
         status_layout_two = getView().findViewById(R.id.fragment_online_online_status_two);
         status_layout_three = getView().findViewById(R.id.fragment_online_online_status_three);
         status_layout_four = getView().findViewById(R.id.fragment_online_online_status_four);
+        nav_menu = (RelativeLayout) getView().findViewById(R.id.nav_menu);
 
         status_layout_first.setOnClickListener(this);
         status_layout_two.setOnClickListener(this);
         status_layout_three.setOnClickListener(this);
+        nav_menu.setOnClickListener(this);
         status_layout_four.setOnClickListener(this);
+
     }
 
     @Override
@@ -54,6 +60,7 @@ public class OnlineFragment extends Fragment implements View.OnClickListener {
                 id == R.id.fragment_online_online_status_three || id == R.id.fragment_online_online_status_four){
             click_on_status(id);
         }
+
     }
 
     private void click_on_status(int id){
@@ -64,6 +71,16 @@ public class OnlineFragment extends Fragment implements View.OnClickListener {
 
         LinearLayout layout = getView().findViewById(id);
         layout.setBackgroundDrawable(getActivity().getResources().getDrawable(R.drawable.shape_border_pink));
+
+    }
+
+    private void setListener(){
+        nav_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainDashBoardActivity) getActivity()).showHideNavView();
+            }
+        });
     }
 
 

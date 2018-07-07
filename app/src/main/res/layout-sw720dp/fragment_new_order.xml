@@ -16,58 +16,35 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/top_statusbar"
-        android:layout_marginLeft="@dimen/nav1_width">
+        android:layout_marginLeft="@dimen/nav1_width"
+        android:layout_marginStart="@dimen/nav1_width">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="7">
-            <RelativeLayout
+            android:layout_weight="5">
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <android.support.v7.widget.CardView
-                    android:id="@+id/cardview_expandable"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorLightGrey">
-
-                    <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <include
+                        android:id="@+id/top_catlist"
+                        layout="@layout/category_list_layout"/>
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_viewmain"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/colorLightGrey">
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/item_offset"
+                        tools:listitem="@layout/row_itemlistmain"
+                        android:scrollbars="horizontal" />
 
-                        <ExpandableListView
-                            android:id="@+id/categories_list"
-                            android:layout_width="100dp"
-                            android:layout_height="40dp" />
+                </LinearLayout>
 
-                        <com.pos.user.tabqy.customtext.CustomTextView
-                            android:id="@+id/group_cat"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_toRightOf="@+id/categories_list"
-                            android:text="Hot Drinks" />
-
-                        <android.support.v7.widget.RecyclerView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@+id/group_cat"
-                            android:scrollbars="horizontal"
-                            android:visibility="gone" />
-                    </RelativeLayout>
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/recycler_viewmain"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/cardview_expandable"
-                    android:padding="@dimen/item_offset"
-                    tools:listitem="@layout/row_itemlistmain"
-                    android:scrollbars="horizontal" />
-            </RelativeLayout>
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -79,7 +56,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_toRightOf="@+id/group_cat"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_toEndOf="@+id/group_cat">
 
                 <RelativeLayout
                     android:id="@+id/deletetop"
@@ -94,7 +72,8 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
                         android:id="@+id/fragment_new_order_delete"
-                        android:src="@drawable/ic_delete_button" />
+                        android:src="@drawable/ic_delete_button"
+                        android:layout_marginStart="10dp" />
 
                     <com.pos.user.tabqy.customtext.CustomTextView
                         android:layout_width="wrap_content"
@@ -109,7 +88,8 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/ic_dot" />
+                        android:src="@drawable/ic_dot"
+                        android:layout_alignParentEnd="true" />
                 </RelativeLayout>
 
                 <LinearLayout
@@ -130,8 +110,7 @@
                     <com.pos.user.tabqy.customtext.CustomTextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:textSize="@dimen/size_8"
+                        android:textSize="@dimen/extra_small_size"
                         android:layout_weight="1"
                         android:text="Items name" />
 
@@ -139,26 +118,25 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:textSize="@dimen/size_8"
-                        android:layout_centerVertical="true"
-                        android:layout_weight="1"
+                        android:textSize="@dimen/extra_small_size"
+                        android:layout_weight=".5"
                         android:text="Qty" />
 
                     <com.pos.user.tabqy.customtext.CustomTextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:textSize="@dimen/size_8"
+                        android:textSize="@dimen/extra_small_size"
                         android:layout_weight="1"
-                        android:text="Price" />
+                        android:text="@string/fragment_crm_price" />
 
                     <com.pos.user.tabqy.customtext.CustomTextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:textSize="@dimen/size_8"
+                        android:textSize="@dimen/extra_small_size"
                         android:layout_weight="1"
-                        android:text="SubTotal" />
+                        android:text="@string/fragment_crm_subtotal" />
 
                 </LinearLayout>
 
@@ -190,7 +168,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_weight="1"
-                            android:gravity="left"
+                            android:gravity="start"
                             android:padding="10dp"
                             android:text="@string/fragment_charge_txtsubtotal"
                             android:textColor="@color/colorDarkGrey"
@@ -265,7 +243,7 @@
                     <LinearLayout
                         android:id="@+id/bottom_buttons"
                         android:layout_width="match_parent"
-                        android:layout_height="70dp">
+                        android:layout_height="60dp">
 
                         <com.pos.user.tabqy.customtext.CustomTextView
                             android:layout_width="0dp"
@@ -275,7 +253,7 @@
                             android:background="#BB0162"
                             android:gravity="center"
                             android:text="@string/save"
-                            android:textSize="@dimen/large_size"
+                            android:textSize="@dimen/small_size"
                             android:id="@+id/fragment_new_order_txtSave"
                             android:textColor="#fff" />
 
@@ -286,7 +264,7 @@
                             android:layout_weight="1"
                             android:background="#A60054"
                             android:gravity="center"
-                            android:textSize="@dimen/large_size"
+                            android:textSize="@dimen/small_size"
                             android:id="@+id/fragment_new_order_txtCharge"
                             android:text="@string/charge_btn"
                             android:textColor="#fff" />
@@ -294,9 +272,6 @@
 
                 </LinearLayout>
 
-                <!--<android.support.v4.widget.NestedScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">-->
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/dragged_items"
@@ -307,7 +282,6 @@
                     android:background="#fff"
                     android:scrollbars="none"/>
 
-                <!--  </android.support.v4.widget.NestedScrollView>-->
             </RelativeLayout>
 
         </LinearLayout>

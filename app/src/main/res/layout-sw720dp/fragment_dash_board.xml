@@ -24,7 +24,8 @@
         android:id="@+id/card_viewtop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/nav_menu">
+        android:layout_toRightOf="@+id/nav_menu"
+        android:layout_toEndOf="@+id/nav_menu">
 
         <RelativeLayout
             android:layout_width="match_parent"

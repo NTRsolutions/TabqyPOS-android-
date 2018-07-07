@@ -1,20 +1,27 @@
 package com.pos.user.tabqy.fragments;
 
-import android.app.Activity;
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.pos.user.tabqy.R;
 import com.pos.user.tabqy.activities.MainDashBoardActivity;
 
-public class ChargeFragment extends Fragment {
+public class ChargeFragment extends Fragment implements View.OnClickListener, RadioGroup.OnCheckedChangeListener{
 
     private RelativeLayout nav_menu;
     private View view;
+    private TextView txt_add_discount, txt_add_note;
 
     public ChargeFragment(){
         // Required empty public constructor
@@ -31,6 +38,9 @@ public class ChargeFragment extends Fragment {
     }
 
     private void setListeners() {
+        txt_add_note.setOnClickListener(this);
+        txt_add_discount.setOnClickListener(this);
+
         nav_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,9 +51,80 @@ public class ChargeFragment extends Fragment {
 
     private void init(View view) {
         nav_menu = (RelativeLayout) view.findViewById(R.id.nav_menu);
+        txt_add_discount = view.findViewById(R.id.fragment_charge_add_discount);
+        txt_add_note = view.findViewById(R.id.fragment_charge_add_note);
     }
 
+    private void addNoteDialog(){
+        final Dialog dialog= new Dialog(getContext());
+        dialog.setContentView(R.layout.dialog_add_note);
 
-    public static class DashBoardFragment extends Activity {
+        dialog.findViewById(R.id.dialog_add_note_cancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.findViewById(R.id.dialog_note_add).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        dialog.show();
+
+    }
+
+    private void addDiscoountDialog(){
+        final Dialog dialog= new Dialog(getContext());
+        dialog.setContentView(R.layout.dialog_add_discount);
+
+        dialog.findViewById(R.id.dialog_add_dis_cancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.findViewById(R.id.dialog_discount_add).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        dialog.show();
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.fragment_charge_add_discount:
+                addDiscoountDialog();
+                break;
+            case R.id.fragment_charge_add_note:
+                addNoteDialog();
+                break;
+        }
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        if(group.getId() == R.id.fragment_charge_radiogroup){
+
+            int id = group.getCheckedRadioButtonId();
+            RadioButton radioButton = group.findViewById(id);
+            if(radioButton.getId() == R.id.fragment_charge_RadioCash){
+                Toast.makeText(getActivity(), "Cash", Toast.LENGTH_SHORT).show();
+            } else{
+                Toast.makeText(getActivity(), "card", Toast.LENGTH_SHORT).show();
+
+            }
+        }
     }
 }

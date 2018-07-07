@@ -38,7 +38,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/size_60"
+                    android:layout_height="@dimen/nav1_width"
                     android:background="@color/colorWhite"
                     android:orientation="vertical"
                     android:padding="5dp"
@@ -51,7 +51,8 @@
                         android:contentDescription="@string/nav_header_desc"
                         app:srcCompat="@drawable/profile_new"
                         android:layout_alignParentLeft="true"
-                        android:layout_centerInParent="true"/>
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentStart="true" />
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -121,27 +122,25 @@
                             android:id="@+id/img_notification"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
                             android:layout_marginLeft="10dp"
                             android:contentDescription="@string/nav_header_desc"
                             android:paddingTop="@dimen/nav_header_vertical_spacing"
-                            android:src="@drawable/ic_notification" />
+                            android:src="@drawable/ic_notification"
+                            android:layout_marginStart="10dp" />
 
                         <ImageView
                             android:id="@+id/img_logout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
                             android:layout_marginLeft="15dp"
-                            android:layout_toRightOf="@+id/img_notification"
                             android:contentDescription="@string/nav_header_desc"
                             android:paddingTop="@dimen/nav_header_vertical_spacing"
-                            android:src="@drawable/ic_logout" />
+                            android:src="@drawable/ic_logout"
+                            android:layout_marginStart="15dp" />
 
                     </LinearLayout>
 
                 </RelativeLayout>
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -161,6 +160,7 @@
                 </LinearLayout>
 
             </LinearLayout>
+
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -178,7 +178,8 @@
                     android:paddingLeft="10dp"
                     android:background="@color/colorWhite"
                     android:paddingRight="10dp"
-                    android:paddingTop="10dp">
+                    android:paddingTop="10dp"
+                    android:layout_alignParentEnd="true">
                     <ImageView
                         android:id="@+id/include_charge_cust_profile"
                         android:layout_width="wrap_content"
@@ -227,9 +228,9 @@
                             android:drawableTop="@drawable/ic_take_way"
                             android:textColor="@color/colorappPink"
                             android:padding="2dp"
-                            android:textSize="@dimen/size_9"
+                            android:textSize="@dimen/size_12"
                             android:layout_alignParentRight="true"
-                            android:gravity="right|center_vertical"
+                            android:gravity="end|center_vertical"
                             android:layout_marginLeft="3dp"
                             android:text="@string/fragment_charge_txt_take_way"
                             android:layout_alignParentEnd="true"
@@ -428,6 +429,7 @@
                                 android:background="#BB0162"
                                 android:gravity="center"
                                 android:text="@string/save"
+                                android:textSize="@dimen/small_size"
                                 android:id="@+id/fragment_crm_order_txtSave"
                                 android:textColor="#fff" />
 
@@ -438,6 +440,7 @@
                                 android:layout_weight="1"
                                 android:background="#A60054"
                                 android:gravity="center"
+                                android:textSize="@dimen/small_size"
                                 android:id="@+id/fragment_crm_order_txtCharge"
                                 android:text="@string/charge_btn"
                                 android:textColor="#fff" />
@@ -445,6 +448,7 @@
 
                     </LinearLayout>
                 </RelativeLayout>
+
             </RelativeLayout>
 
         </LinearLayout>

@@ -15,7 +15,7 @@
             android:name=".activities.AuthenticationActivity"
             android:label="@string/title_activity_authentication"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden" />
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".activities.SplashScreen"
             android:label="@string/title_activity_splash_screen"
