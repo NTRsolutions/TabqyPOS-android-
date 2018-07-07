@@ -19,6 +19,8 @@ public class CustomList implements Serializable {
     public double lng;
     public String estimatedTime;
 
+    //aa
+
     /**
      * No args constructor for use in serialization
      */
